@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+	<title>作品五</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="title" content="">
+	<meta name="subject" content="">
+	<meta name="description" content="">
+	<meta name="Keywords" content="">
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<link href="css/loading.css" rel="stylesheet">
+	<link href="css/smart_tab_all.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!--loading-->
+	<div id="load">
+		<div class="cicle"></div>
+
+		<div class="wrap">
+			<div class="bg">
+				<div class="loading">
+					<span class="title">17周年庆</span>
+					<span class="text">经典 ‧ 从不妥协</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav>
+		<div><a class="" href="#one">首页</a></div>
+		<div><a class="" href="#two">回顾历程</a></div>
+		<div><a class="" href="#gift">定制礼品</a></div>
+		<div><a class="" href="#four">千万彩金</a></div>
+	</nav>
+	<canvas id="canvas"></canvas>
+	<!-- <div id="mouse-trail"></div> -->
+	<div class="container">
+		<div id="one" class="page p1">
+			<div class="mainBg bgs"></div>
+			<div class="bgSky bgs"></div>
+			<div class="bgBook bgs parallax-bg" data-speed=".3"></div>
+			<div class="bgCover bgs parallax-bg" data-speed=".2"></div>
+			<div class="soptLights showOnLabAndUp">
+				<img class="spotLightL" src="images/spotLightL.png" alt="">
+				<img class="spotLightR" src="images/spotLightR.png" alt="">
+			</div>
+			<div class="curtain bgs parallax-bg" data-speed=".1"></div>
+			<!-- <div class="animation bgs"></div> -->
+
+			<!-- <div class="p1Left bgs">
+				<img class="curtainLeft showOnLabAndUp" src="images/curtainLeft.png" alt="">
+			</div>
+			<div class="p1Right bgs">
+				<img class="curtainRight showOnLabAndUp" src="images/curtainRight.png" alt="">
+			</div> -->
+			<div class="mainBgFilter"></div>
+			<!-- <div class="bgs p1bg"></div> -->
+
+
+			<div class="balls showOnPadAndUp">
+				<img class="ball1 parallax-bg" src="images/ball1.png" alt="" data-speed=".05">
+			</div>
+			<div class="balls showOnPadAndUp">
+				<img class="ball17 parallax-bg" src="images/ball17.png" alt="" data-speed=".1">
+			</div>
+			<main>
+				<div class="logoBlock">
+					<img class="logoUB parallax-bg" src="images/logoUB.png" alt="" data-speed=".4">
+					<img class="logo17 parallax-bg" src="images/logo17.png" alt="" data-speed=".3">
+					<img class="logoScreenLight parallax-bg" src="images/logoScreenLight.png" alt="" data-speed=".5">
+					<img class="balloon" src="images/balloon.png" alt="">
+					<div class="logoScreenLight1"><img class="logoScreenLight parallax-bg"
+							src="images/logoScreenLight.png" alt="" data-speed=".5"></div>
+				</div>
+				<h2 class="title parallax-bg" data-speed=".12"></h2>
+			</main>
+			<section class="info parallax-bg" data-speed=".1">
+				<h3>周年庆 ‧ 回馈千万豪礼</h3>
+				<span></span>
+				<h3 class="green">2023.10.1-2023.10.31</h3>
+			</section>
+			<section class="features">
+				<div class="feat feat1">
+					<a href="#two">
+						<img class="featBack" src="images/feat1back.png" alt="">
+						<img class="featFront" src="images/feat1Front.png" alt="">
+						<h4>回顾历程</h4>
+					</a>
+				</div>
+				<div class="feat feat2">
+					<a href="#gift">
+						<img class="featBack" src="images/feat2back.png" alt="">
+						<img class="featFront" src="images/feat2Front.png" alt="">
+						<h4>周年定制礼品</h4>
+					</a>
+				</div>
+				<div class="feat feat3">
+					<a href="#four">
+						<img class="featBack" src="images/feat3back.png" alt="">
+						<img class="featFront" src="images/feat3Front.png" alt="">
+						<img class="featFront logoScreenLight" src="images/feat3FrontL.png" alt="">
+						<h4>千万彩金3重送</h4>
+					</a>
+				</div>
+			</section>
+		</div>
+
+		<div id="two" class="page p2">
+			<div class="p2Bg bgs parallax-bg" data-speed=".1"></div>
+			<dl>
+				<!-- <dt><img src="images/anniversaryTitle.png" alt=""></dt> -->
+				<dd class="header showOnLabAndUp"><img src="images/anniversaryTitle.png" alt=""></dd>
+				<dd class="header"><img src="images/anniversaryTitle.png" alt=""></dd>
+				<dd class="p2Logo">
+					<h1><img src="images/p2Logo.png" alt=""></h1>
+					<h2 class="solgan">
+						线上最大盛典-周年庆
+						<span class="yellow">全民狂欢共襄盛举</span>
+					</h2>
+
+				</dd>
+				<dd>
+					<h3>10周年庆</h3>
+					<h4>首次跨界合作，<span class="showOnPadAndUp lineHeight0"><br></span>与Zippo推出定制打火机</h4>
+					<h5><img src="images/p2gift1.png" alt=""></h5>
+				</dd>
+				<dd>
+					<h3>11周年庆</h3>
+					<h4>携手奔驰<span class="showOnPadAndUp lineHeight0"><br></span>加冕彩神荣耀</h4>
+					<h5><img src="images/p2gift2.png" alt=""></h5>
+				</dd>
+				<dd class="line"></dd>
+				<dd>
+					<h3>12周年庆</h3>
+					<h4>X哈雷戴维森<span class="showOnPadAndUp lineHeight0"><br></span>周周送哈雷</h4>
+					<h5><img src="images/p2gift3.png" alt=""></h5>
+				</dd>
+				<dd>
+					<h3>13周年庆</h3>
+					<h4>与IQOS联手定制<span class="showOnPadAndUp lineHeight0"><br></span>电子烟、黄金吊牌</h4>
+					<h5><img src="images/p2gift4.png" alt=""></h5>
+				</dd>
+				<dd>
+					<h3>14&15周年庆</h3>
+					<h4>共享豪礼750万+</h4>
+					<h5><img src="images/p2gift5.png" alt=""></h5>
+				</dd>
+				<dd>
+					<h3>16周年庆</h3>
+					<h4>平台焕新升级</h4>
+					<h5><img src="images/p2gift6.png" alt=""></h5>
+				</dd>
+			</dl>
+		</div>
+		<div id="gift" class="page p3">
+			<div class="bgs p3Bg parallax-bg" data-speed=".1"></div>
+			<div class="p3LightBlock showOnLabAndUp"><img class="p3Light" src="images/p3Light.png" alt=""></div>
+			<div class="left">
+				<div class="p3LogoBlock">
+					<img class="p3logo" src="images/p3logo.png" alt="">
+					<img class="p3logoLight" src="images/p3logoLight.png" alt="">
+				</div>
+				<h2 class="title">-周年送好礼-</h2>
+			</div>
+			<div class="right">
+				<img class="" src="images/anniversaryTitle.png" alt="">
+				<section class="gifts">
+					<div class="gift g1">
+						<h3>苹果联名AirPods 3</h3>
+						<h5>
+							<img class="giftCloud back" src="images/p4gift1CloudBack.png" alt="">
+							<img class="p4gift1" src="images/p4gift1.png" alt="">
+							<img class="giftCloud front" src="images/p4gift1CloudFront.png" alt="">
+						</h5>
+						<h4>领取条件<br>
+							今年投注前50名用户
+						</h4>
+					</div>
+					<div class="gift g2">
+						<h3>尊荣礼金</h3>
+						<h5>
+							<img class="giftCloud back" src="images/p4gift2CloudBack.png" alt="">
+							<img class="p4gift2" src="images/p4gift2.png" alt="">
+							<img class="giftCloud front" src="images/p4gift2CloudFront.png" alt="">
+						</h5>
+						<h4>领取条件<br>
+							1、今年投注前50名用户<br>
+							2、<span class="green">7/20-10/17</span>达3万有效流水<br>
+							满足以上任一条件即可获得<br>
+						</h4>
+					</div>
+					<div class="gift g3">
+						<h3>扑克牌(典藏)</h3>
+						<h5>
+							<img class="giftCloud back" src="images/p4gift3CloudBack.png" alt="">
+							<img class="p4gift3" src="images/p4gift3.png" alt="">
+							<img class="giftCloud front" src="images/p4gift3CloudFront.png" alt="">
+						</h5>
+						<h4>领取条件<br>
+							1、今年投注前50名用户<br>
+							2、VIP会员近90天达3万流水<br>
+							满足以上任一条件即可获得<br>
+							<span class="smallSize">未达标者，可参与<a class="anchor green" href="">周年活动获取领取资格</a></span>
+						</h4>
+					</div>
+				</section>
+				<section class="notice">
+					<img class="coinLeft" src="images/coinLeft.png" alt="">
+					<img class="coinRight" src="images/coinRight.png" alt="">
+
+					<p>※领取时间：10/18-11/7 <br>
+						※礼品一经发出，恕不更换收件人信息<br>
+						※符合条件者将收到站内信通知，收到通知后请于11/7前至平台点击领取礼品并填写资料，礼品将在11月陆续寄送
+
+					</p>
+				</section>
+			</div>
+		</div>
+		<div id="four" class="page p4">
+			<div class="bgs p4Bg parallax-bg" data-speed=".05"></div>
+
+			<div id="smarttab">
+				<ul class="nav">
+					<h2 class="title">-周年庆活动-</h2>
+					<li>
+						<a class="nav-link" href="#tab-1">◆ 周年庆投注礼金</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#tab-2">◆ 周年庆，中奖排行送飞天茅台</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#tab-3">◆ 周年纪念品领取</a>
+					</li>
+				</ul>
+				<div class="contentTitle">
+					<h3 class="green">2023.10.1-10.31</h3>
+					<img src="images/anniversaryTitle.png" alt="">
+				</div>
+				<div class="tab-content">
+					<div id="tab-1" class="tab-pane inner-scrollbar" role="tabpanel">
+						<h2 class="title">-周年庆投注礼金-</h2>
+						<h3>全体会员</h3>
+						<!-- <div class="tableAnchor">
+							<button class="table1">彩票</button>
+							<button class="table2">棋牌</button>
+							<button class="table3">骰宝</button>
+							<button class="table4">轮盘</button>
+							<button class="table5">电子</button>
+							<button class="table6">捕鱼</button>
+							<button class="table7">体育</button>
+						</div> -->
+						<!-- <div class="tableAnchor">
+							<a href="#table1">彩票</a>
+							<a href="#table2">棋牌</a>
+							<a href="#table3">骰宝</a>
+							<a href="#table4">轮盘</a>
+							<a href="#table5">电子</a>
+							<a href="#table6">捕鱼</a>
+							<a href="#table7">体育</a>
+						</div> -->
+						<div class="tableBlock">
+							<div class="tables" id="table1">
+								<dl>
+									<dt>【彩票】投注礼金</dt>
+									<dd>
+										<dl>
+											<dt class="yellow">单期累计投注额</dt>
+											<dd>1,000</dd>
+											<dd>5,000</dd>
+											<dd>10,000</dd>
+											<dd>30,000</dd>
+											<dd>50,000</dd>
+											<dd>100,000</dd>
+											<dd>200,000</dd>
+											<dd>500,000</dd>
+											<dd>800,000</dd>
+											<dd>1,280,000</dd>
+											<dd>1,580,000</dd>
+											<dd>1,880,000</dd>
+										</dl>
+										<dl>
+											<dt class="yellow">投注礼金</dt>
+											<dd>8</dd>
+											<dd>38</dd>
+											<dd>78</dd>
+											<dd>238</dd>
+											<dd>398</dd>
+											<dd>798</dd>
+											<dd>1,598</dd>
+											<dd>3,998</dd>
+											<dd>6,588</dd>
+											<dd>10,688</dd>
+											<dd>13,688</dd>
+											<dd>18,888</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+							<div class="tables" id="table2">
+								<dl>
+									<dt>【棋牌】投注礼金 </dt>
+									<dd>
+										<dl>
+											<dt class="yellow">单期累计投注额</dt>
+											<dd>1,000</dd>
+											<dd>3,000</dd>
+											<dd>5,000</dd>
+											<dd>10,000</dd>
+											<dd>50,000</dd>
+											<dd>100,000</dd>
+											<dd>300,000</dd>
+											<dd>500,000</dd>
+											<dd>800,000</dd>
+											<dd>1,500,000</dd>
+										</dl>
+										<dl>
+											<dt class="yellow">投注礼金</dt>
+											<dd>6</dd>
+											<dd>18</dd>
+											<dd>28</dd>
+											<dd>58</dd>
+											<dd>298</dd>
+											<dd>598</dd>
+											<dd>1,898</dd>
+											<dd>3,188</dd>
+											<dd>5,188</dd>
+											<dd>10,088</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+							<div class="tables" id="table3">
+								<dl>
+									<dt>【骰宝】投注礼金 </dt>
+									<dd>
+										<dl>
+											<dt class="yellow">单期累计投注额</dt>
+											<dd>1,000</dd>
+											<dd>5,000</dd>
+											<dd>10,000</dd>
+											<dd>60,000</dd>
+											<dd>100,000</dd>
+											<dd>280,000</dd>
+											<dd>580,000</dd>
+											<dd>880,000</dd>
+											<dd>1,280,000</dd>
+										</dl>
+										<dl>
+											<dt class="yellow">投注礼金</dt>
+											<dd>6</dd>
+											<dd>30</dd>
+											<dd>66</dd>
+											<dd>368</dd>
+											<dd>628</dd>
+											<dd>1,788</dd>
+											<dd>3,788</dd>
+											<dd>5,888</dd>
+											<dd>8,688</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+							<div class="tables" id="table4">
+								<dl>
+									<dt>【轮盘】投注礼金 </dt>
+									<dd>
+										<dl>
+											<dt class="yellow">单期累计投注额</dt>
+											<dd>1,000</dd>
+											<dd>5,000</dd>
+											<dd>10,000</dd>
+											<dd>60,000</dd>
+											<dd>100,000</dd>
+											<dd>280,000</dd>
+											<dd>580,000</dd>
+											<dd>880,000</dd>
+											<dd>1,280,000</dd>
+										</dl>
+										<dl>
+											<dt class="yellow">投注礼金</dt>
+											<dd>6</dd>
+											<dd>30</dd>
+											<dd>66</dd>
+											<dd>368</dd>
+											<dd>628</dd>
+											<dd>1,788</dd>
+											<dd>3,788</dd>
+											<dd>5,888</dd>
+											<dd>8,688</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+							<div class="tables" id="table5">
+								<dl>
+									<dt>【电子】投注礼金</dt>
+									<dd>
+										<dl>
+											<dt class="yellow">单期累计投注额</dt>
+											<dd>1,000</dd>
+											<dd>3,000</dd>
+											<dd>8,000</dd>
+											<dd>20,000</dd>
+											<dd>50,000</dd>
+											<dd>100,000</dd>
+											<dd>250,000</dd>
+											<dd>600,000</dd>
+											<dd>1,200,000</dd>
+											<dd>2,000,000</dd>
+										</dl>
+										<dl>
+											<dt class="yellow">投注礼金</dt>
+											<dd>6</dd>
+											<dd>18</dd>
+											<dd>50</dd>
+											<dd>128</dd>
+											<dd>308</dd>
+											<dd>618</dd>
+											<dd>1,568</dd>
+											<dd>3,788</dd>
+											<dd>7,588</dd>
+											<dd>13,088</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+							<div class="tables" id="table6">
+								<dl>
+									<dt>【捕鱼】投注礼金</dt>
+									<dd>
+										<dl>
+											<dt class="yellow">单期累计投注额</dt>
+											<dd>500</dd>
+											<dd>1,000</dd>
+											<dd>5,000</dd>
+											<dd>10,000</dd>
+											<dd>30,000</dd>
+											<dd>80,000</dd>
+											<dd>200,000</dd>
+											<dd>500,000</dd>
+											<dd>1,000,000</dd>
+											<dd>1,500,000</dd>
+										</dl>
+										<dl>
+											<dt class="yellow">投注礼金</dt>
+											<dd>2</dd>
+											<dd>6</dd>
+											<dd>28</dd>
+											<dd>58</dd>
+											<dd>178</dd>
+											<dd>488</dd>
+											<dd>1,228</dd>
+											<dd>3,108</dd>
+											<dd>6,298</dd>
+											<dd>9,888</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+							<div class="tables" id="table7">
+								<dl>
+									<dt>【体育】投注礼金</dt>
+									<dd>
+										<dl>
+											<dt class="yellow">单期累计投注额</dt>
+											<dd>1,000</dd>
+											<dd>5,000</dd>
+											<dd>10,000</dd>
+											<dd>50,000</dd>
+											<dd>100,000</dd>
+											<dd>200,000</dd>
+											<dd>500,000</dd>
+											<dd>800,000</dd>
+											<dd>1,500,000</dd>
+										</dl>
+										<dl>
+											<dt class="yellow">投注礼金</dt>
+											<dd>5</dd>
+											<dd>28</dd>
+											<dd>58</dd>
+											<dd>298</dd>
+											<dd>608</dd>
+											<dd>1,288</dd>
+											<dd>3,288</dd>
+											<dd>5,288</dd>
+											<dd>10,288</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<p>1. 同一会员、提款人、IP、设备端仅发一次。 <span class="showOnMobileOnly lineHeight0"><br></span>
+							各活动礼金取最高档位派发。 <br>
+							2. 拥有本次活动最终解释权和裁决权。 </p>
+					</div>
+					<div id="tab-2" class="tab-pane inner-scrollbar" role="tabpanel">
+						<h2 class="title">-周年庆，中奖排行送飞天茅台-</h2>
+						<h3>全体会员</h3>
+						<p>周年庆期间，冲击【周中奖排行榜】名次，<br>单期活动结束将依据最后名次派发对应奖励<br>排行榜在平台首页，点击相关图示即可查阅相关内容</p>
+						<div class="tables t2">
+							<dl>
+								<dd>
+									<dl>
+										<dt>排行榜名次</dt>
+										<dd class="yellow">第1名</dd>
+										<dd>第2名</dd>
+										<dd>第3名</dd>
+										<dd>第4名</dd>
+										<dd>第5名</dd>
+										<dd>第6名 - 第10名</dd>
+										<dd>第11名 - 第15名</dd>
+									</dl>
+									<dl>
+										<dt>排名奖励</dt>
+										<dd class="yellow">53度飞天茅台酱香型 500ml</dd>
+										<dd>888</dd>
+										<dd>788</dd>
+										<dd>688</dd>
+										<dd>588</dd>
+										<dd>388</dd>
+										<dd>188</dd>
+									</dl>
+								</dd>
+							</dl>
+						</div>
+
+						<p>1. 排行榜名次为每15分钟进行更新。 <br>
+							2. 单期活动最终名次将于结束隔日10:00前<span class="showOnMobileOnly lineHeight0"><br></span>于平台进行公告。 <br>
+							3. 红包奖励于单期活动结束隔日中午12:00前<span
+								class="showOnMobileOnly lineHeight0"><br></span>进行派发；实体奖品不得折现，得奖会员将以<span
+								class="showOnMobileOnly lineHeight0"><br></span>平台邮件通知领奖办法<br>
+							4. 单期活动同一会员、提款人、IP、<span class="showOnMobileOnly lineHeight0"><br></span>设备端仅限领取一次。<br>
+							5. 拥有本次活动最终解释权和裁决权</p>
+
+					</div>
+					<div id="tab-3" class="tab-pane inner-scrollbar" role="tabpanel">
+						<h2 class="title">-周年纪念品领取-</h2>
+						<h3>全体会员</h3>
+						<p>活动期间满足以下任一条件，即可获得17周年精美纪念品一份</p>
+						<div class="tables t3">
+							<dl>
+								<dt>领取条件</dt>
+								<dd>1、VIP会员近90日投注流水达3万元</dd>
+								<dd>2、晋升VIP会员</dd>
+								<dd>3、期间【轮盘】任一局开出奖号〝17〞，凡投注该局会员即有领取资格</dd>
+							</dl>
+							<dl>
+								<dt>领取流程</dt>
+								<dd>1、领取时间10/18-11/7</dd>
+								<dd>2、符合条件者将收到平台站内信通知</dd>
+								<dd>3、请到平台点击领取礼品并填写完整寄送资料</dd>
+							</dl>
+						</div>
+
+						<p>1. 礼品寄送资料请于11月7日前填写，<span class="showOnMobileOnly lineHeight0"><br></span>逾时将视同放弃资格不予补发。 <br>
+							2. 同一会员、提款人、IP、设备端仅发一次。 <br>
+							3. 拥有本次活动最终解释权和裁决权。<br>
+							4. 礼品一经发出，恕不更换收件人信息</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/jquery.smartTab.min.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
+	<script src="js/plugins/overscroll.js"></script>
+	<!-- <script src="js/plugins/anchor-plugin.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

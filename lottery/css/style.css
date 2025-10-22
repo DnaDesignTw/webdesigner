@@ -1,0 +1,738 @@
+@charset "utf-8";
+
+html {
+    font-family: GillSans, Calibri, Trebuchet, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", sans-serif;
+    width: 100%;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    text-shadow: 1px 1px 1px #080102;
+    background-color: #16242b;
+}
+
+.mainBg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(../images/mainBg.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.mainBgFliter {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../images/mainBgFliter1.png);
+    background-repeat: repeat-y;
+    background-position: center 0;
+    -webkit-filter: brightness(0.5) opacity(0.5);
+    filter: brightness(0.5) opacity(0.5);
+    z-index: -2;
+}
+
+.mainBgFliter1 {
+    background-image: url(../images/mainBgFliter1.png);
+    background-size: contain;
+}
+
+.mainBgFliter2 {
+    background-image: url(../images/mainBgFliter2.png);
+    background-size: contain;
+}
+
+.mainBgFliter3 {
+    background-image: url(../images/mainBgFliter3.png);
+    background-size: contain;
+}
+
+.mainBgFliter4 {
+    background-image: url(../images/mainBgFliter4.png);
+    background-size: contain;
+}
+
+.mainBgFliter5 {
+    background-image: url(../images/mainBgFliter5.png);
+    background-size: contain;
+}
+
+.mainBgFliter6 {
+    background-image: url(../images/mainBgFliter6.png);
+    background-size: contain;
+}
+
+.mainBgFliter7 {
+    background-image: url(../images/mainBgFliter7.png);
+    background-size: contain;
+}
+
+main {
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.loginBefore .loginBeforeBg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.loginBeforeBg .light {
+    display: none;
+}
+
+.loginBeforeBg .light1 {
+    opacity: 0.3;
+}
+
+.loginBeforeBg .light2 {
+    opacity: 0.3;
+}
+
+.loginBeforeBg.spot1 {
+    background: url(../images/spot1.png) no-repeat center;
+    background-size: contain;
+}
+
+.loginBeforeBg.spot2 {
+    background: url(../images/spot2.png) no-repeat center;
+    background-size: contain;
+}
+
+.loginBeforeBg.spot3 {
+    background: url(../images/spot3.png) no-repeat center;
+    background-size: contain;
+}
+
+.loginBefore #titleBlock {
+    position: relative;
+    margin-top: 16%;
+    margin-right: -5%;
+    margin-left: -5%;
+}
+
+.loginBefore #title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loginBtn {
+    position: relative;
+    width: 36%;
+    margin-top: 65%;
+    background-color: transparent;
+    border: none;
+    -webkit-filter: opacity(0.8) brightness(1);
+    filter: opacity(0.8) brightness(1);
+}
+
+.loginBtn:focus {
+    background-color: initial;
+}
+
+#logoutBlock .row {
+    margin-bottom: 0;
+}
+
+#logoutBlock {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1002;
+}
+
+#logoutBlock a {
+    color: #fff282;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+#logoutBlock a:hover {
+    text-decoration: none;
+}
+
+.loginAfter .lotteryContainer {
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+}
+
+.loginAfter #listBtn {
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.loginAfter .spots {
+    position: absolute;
+    z-index: -1;
+}
+
+.loginAfter .topRight {
+    width: 349px;
+    height: 333px;
+    top: -3%;
+    left: 56%;
+    background: url(../images/topRight1.png) no-repeat;
+    background-size: 50%;
+}
+
+.loginAfter .topRight2 {
+    background-image: url(../images/topRight2.png);
+}
+
+.loginAfter .bottomRight {
+    width: 381px;
+    height: 318px;
+    top: 46%;
+    left: 58%;
+    background: url(../images/bottomRight1.png) no-repeat;
+    background-size: 50%;
+}
+
+.loginAfter .bottomRight2 {
+    background-image: url(../images/bottomRight2.png);
+}
+
+.loginAfter .bottomLeft {
+    width: 379px;
+    height: 272px;
+    top: 55%;
+    left: -7%;
+    background: url(../images/bottomLeft1.png) no-repeat;
+    background-size: 50%;
+}
+
+.loginAfter .bottomLeft2 {
+    background-image: url(../images/bottomLeft2.png);
+}
+
+.loginAfter .topLeft {
+    width: 379px;
+    height: 356px;
+    top: -3%;
+    left: -15%;
+    background: url(../images/topLeft1.png) no-repeat;
+    background-size: 50%;
+}
+
+.loginAfter .topLeft2 {
+    background-image: url(../images/topLeft2.png);
+}
+
+.loginAfter .lotteryBlock {
+    background: url(../images/yellow.png) no-repeat;
+    background-size: contain;
+    position: relative;
+    margin: 20% auto 0;
+    overflow: hidden;
+}
+
+.loginAfter .lotteryBlock .lotteryLogo {
+    position: absolute;
+    left: 6%;
+    width: 50%;
+    z-index: 3;
+}
+
+.loginAfter .lotteryBlock:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: url(../images/blue.png) no-repeat center;
+    background-size: contain;
+    z-index: 2;
+}
+
+.loginAfter .lotteryBlock .innerWhite {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: url(../images/white.png) no-repeat center;
+    background-size: contain;
+}
+
+.loginAfter .lotteryBlock .outer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.loginAfter .lotteryBlock .outer img {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+.loginAfter .lotteryBlock .inner {
+    position: absolute;
+    width: 35.5%;
+    height: 35%;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-image: url(../images/arrow.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.loginAfter .lotteryBlock .inner.start:active {
+    -webkit-transform: translate(-50%, -50%) scale(.95);
+    -moz-transform: translate(-50%, -50%) scale(.95);
+    -ms-transform: translate(-50%, -50%) scale(.95);
+    -o-transform: translate(-50%, -50%) scale(.95);
+    transform: translate(-50%, -50%) scale(.95);
+}
+
+.loginAfter .lotteryBlock .inner.start {
+    background-position: 0 0;
+}
+
+.loginAfter .lotteryBlock .inner.no-start {
+    background-position: -5rem 0;
+}
+
+.loginAfter .lotteryBlock .inner.completed {
+    background-position: 100% 0;
+}
+
+.loginAfter #showPrize {
+    position: absolute;
+    transform: translateY(-60%);
+}
+
+.loginAfter .resultBlock {
+    position: relative;
+    margin: 20px auto 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px 1px rgba(125, 50, 190, 0.75), inset 0 0 5px 1px rgba(125, 50, 190, 0.75);
+}
+
+.loginAfter .resultBlock .borderLight {
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    mix-blend-mode: screen;
+}
+
+.loginAfter .resultBlock .borderLightTop {
+    top: 0;
+    left: 5%;
+}
+
+.loginAfter .resultBlock .borderLightRight {
+    top: 50%;
+    right: 0;
+}
+
+.loginAfter .resultBlock .borderLightBottom {
+    bottom: 0;
+    right: 5%;
+}
+
+.loginAfter .resultBlock .borderLightLeft {
+    bottom: -50%;
+    left: 0;
+}
+
+.loginAfter .resultBlock p {
+    font-size: 1.1rem;
+    text-shadow: 0px 0px 2px rgba(125, 50, 190, 0.75), 0px 0px 2px rgba(125, 50, 190, 0.75), 0px 0px 2px rgba(125, 50, 190, 0.75);
+}
+
+.loginAfter .resultBlock .playTimesLeft {
+    color: #fff07d;
+    font-size: 1.6rem;
+}
+
+#ruleBlock {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#ruleBlock .col {
+    margin-bottom: 5%;
+}
+
+.redAlert {
+    color: #ff5656;
+    margin-bottom: 10px;
+}
+
+.modal {
+    width: 95%;
+    max-width: 1000px;
+}
+
+dt,
+dd {
+    width: auto;
+}
+
+.modal {
+    background-color: initial;
+    box-shadow: none;
+    max-height: 80%;
+    top: 12% !important;
+}
+
+#playedTimes {
+    display: none;
+}
+
+.modal-header {
+    text-align: center;
+    color: #07d5db;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.modal-content p {
+    color: #fff;
+}
+
+dl {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    line-height: 3;
+    margin: 0 0 8px;
+}
+
+.modal-content dl:nth-of-type(odd) {
+    background: url(../images/tableBg2.png);
+}
+
+.modal-content dl:nth-of-type(even) {
+    background-color: rgba(38, 188, 229, 0.9);
+}
+
+
+.modal-content dl:nth-of-type(1) {
+    color: #55380f;
+    border: none;
+    background: url(../images/tableBg1.jpg);
+    text-shadow: initial;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/*登入*/
+
+#loginBtn {
+    cursor: pointer;
+    position: relative;
+}
+
+#close {
+    z-index: 21;
+    position: absolute;
+    top: -16px;
+    right: 9px;
+    cursor: pointer;
+}
+
+#loginPage {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 40, 40, 0.9);
+    z-index: 0;
+    padding-top: 13%;
+    opacity: 0;
+}
+
+#loginPage .btn {
+    background-color: #16abcd;
+    width: 91px;
+    height: 42px;
+    padding: 0;
+    line-height: 1;
+}
+
+.material-icons {
+    color: #FFF;
+}
+
+.input-field {
+    margin: 2rem 0 2rem 0;
+}
+
+
+
+/* label color */
+
+.input-field label {
+    color: #FFF;
+}
+
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label,
+.input-field input[type=password]:focus+label {
+    color: #FFF;
+}
+
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #FFF;
+    box-shadow: 0px 1px 0px 0px #FFF;
+    color: #FFF;
+}
+
+input[type=text].valid,
+input[type=password].valid {
+    border-bottom: 1px solid #FFF;
+    box-shadow: 0px 1px 0px 0px #FFF;
+    color: #FFF !important;
+}
+
+input,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+    transition-delay: background-color 5000s, color 5000s;
+    color: #FFF !important;
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .loginBefore #titleBlock {
+        margin-top: 15%;
+    }
+
+    .loginAfter .lotteryBlock {
+        margin-top: 12%;
+    }
+
+    .loginAfter .spots {
+        background-size: 80%;
+    }
+
+    #ruleBlock {
+        width: 94%;
+        margin-top: 40px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: flex-end;
+        align-items: flex-end;
+    }
+
+    #ruleBlock .col {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .mainBgFliter {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .loginBeforeBg .light {
+        display: block;
+    }
+
+    .loginBefore .container {
+        width: 40%;
+    }
+
+    .loginBefore #titleBlock {
+        margin-top: 2%;
+    }
+
+    .loginAfter .lotteryBlock {
+        background: inherit;
+        overflow: inherit;
+    }
+
+    .loginAfter .lotteryBlock:after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        content: "";
+        width: 697px;
+        height: 400px;
+        transform: translateX(-50%);
+        background: url(../images/yellowBig.png) no-repeat center;
+        background-size: contain;
+    }
+
+    .loginAfter .resultBlock p {
+        margin: 10px 0;
+    }
+
+    dt,
+    dd {
+        width: 33.33333333%;
+        text-align: center;
+    }
+
+    dd {
+        margin: 0;
+    }
+
+    .modal {
+        overflow-y: visible;
+    }
+
+    .scrollbar-inner>.scroll-element .scroll-element_track {
+        background-color: #1d5b78;
+    }
+
+    .scrollbar-inner>.scroll-element .scroll-bar {
+        background-color: #5fa0c1;
+    }
+
+    .scrollbar-inner {
+        max-height: 400px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #ruleBlock {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    footer {
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+
+    /* .loginBefore .container {
+        width: 45%;
+    } */
+    #ruleBlock {
+        line-height: 2;
+    }
+
+    #ruleBlock {
+        margin-top: 0;
+    }
+
+    .scrollbar-inner {
+        max-height: 500px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1819px) {
+    .loginAfter .lotteryContainer {
+        max-width: 400px;
+    }
+
+    .loginAfter .spots {
+        background-size: 60%;
+    }
+}
+
+@media only screen and (min-width: 1820px) {
+    html {
+        font-size: 18px;
+    }
+
+    .loginBtn {
+        width: 36%;
+        margin-top: 530px;
+    }
+
+    .loginAfter .lotteryBlock:after {
+        width: 958.3px;
+        height: 550px;
+    }
+
+    .scrollbar-inner {
+        max-height: 750px;
+    }
+}
+
+@supports (mix-blend-mode: soft-light) {
+    .mainBg {
+        opacity: 1;
+    }
+
+    .mainBgFliter {
+        mix-blend-mode: soft-light;
+        filter: inherit;
+        z-index: -1;
+    }
+
+    .loginBeforeBg .light {
+        mix-blend-mode: soft-light;
+    }
+
+    .loginBeforeBg .light1 {
+        opacity: 0;
+    }
+
+    .loginBeforeBg .light2 {
+        opacity: 1;
+        -webkit-filter: brightness(1.4);
+        filter: brightness(1.4);
+    }
+}

@@ -1,0 +1,834 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanssc.css);
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    margin-top: 15px;
+    text-align: center;
+}
+
+h2 span {
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #d9930c;
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    line-height: 110%;
+    margin-top: 15px;
+    color: #77d5ff;
+}
+
+.logo {
+    width: 9rem;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    z-index: 99;
+}
+
+#nav {
+    height: 64px;
+    top: 0px;
+    text-align: right;
+    padding-right: 10%;
+}
+
+#nav span {
+    display: inline-block;
+    margin: 0px 5px;
+    width: 140px;
+    height: 8px;
+    text-align: center;
+    border: none;
+    border-radius: 0px;
+    font-size: 16px;
+}
+
+#nav span:before {
+    content: "彩神节";
+    position: relative;
+    top: 20px;
+    color: #fff;
+}
+
+#nav span:nth-child(2):before {
+    content: "彩神活动";
+}
+
+#nav span:nth-child(3):before {
+    content: "订制礼品";
+}
+
+.awardList {
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 99;
+    padding: 4px 8px;
+    border-radius: 50px;
+    border: 2px solid #ffac0b;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: none;
+    border: 2px solid #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ffad10;
+    border: 2px solid #ffad10;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    right: 20px;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 20px 0;
+}
+
+.brand-logo img {
+    margin-top: 8px;
+}
+
+#p1 .mainBg {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-10deg);
+    overflow: hidden;
+}
+
+#p1 .mainBg div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+.motorBike {
+    background: url(../images/motorBike.png) no-repeat center;
+}
+
+.redLight {
+    background: url(../images/redLight.png) no-repeat center;
+}
+
+.rock {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/rock.png) no-repeat center;
+    background-size: contain;
+    opacity: 0;
+    transition: 2s opacity ease-out 1s;
+    ;
+}
+
+.swiper-slide-active .rock {
+    opacity: 1;
+}
+
+.smoke {
+    background: url(../images/smoke.png) no-repeat center;
+}
+
+
+
+
+.mainTitle {
+    width: 23rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    opacity: 0;
+    /*display: none;*/
+    z-index: -1;
+}
+
+.mainTitle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mainTitle .titleSmoke {
+    width: 10rem;
+    left: -20px;
+    top: -20px
+}
+
+#p2 section,
+#p3 section {
+    position: relative;
+}
+
+.frame {
+    width: 190px;
+    height: 150px;
+    background: url(../images/tube.png) no-repeat top;
+    background-size: contain;
+    position: relative;
+    text-align: left;
+    margin-bottom: 2%;
+}
+
+.frame:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 190px;
+    height: 150px;
+    background: url(../images/tubeFrame.png) no-repeat top;
+    background-size: contain;
+    z-index: -1;
+}
+
+.frame1:before {}
+
+.frame2:before {}
+
+.frame3:before {}
+
+.frame4:before {}
+
+.frame5:before {}
+
+.ladder {
+    transform: rotate(90deg);
+    transform-origin: left;
+    width: calc(100vh);
+    position: absolute;
+    top: -30%;
+    z-index: -1;
+}
+
+#p3 .ladder {
+    top: -65%;
+}
+
+#p2 .modal-trigger,
+#p3 .modal-trigger {
+    display: block;
+    overflow: hidden;
+    padding: 15px 20px;
+}
+
+.customerService,
+.wechat {
+    position: absolute;
+    right: 1%;
+    width: 31px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.customerService a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.customerService {
+    background: url(../images/customerService.png) no-repeat center;
+    top: 20%;
+}
+
+.customerService:hover {
+    background-image: url(../images/customerServiceHover.png);
+}
+
+.wechat {
+    background: url(../images/wechat.png) no-repeat center;
+    top: calc(20% + 65px);
+}
+
+.wechat:hover {
+    background-image: url(../images/wechatHover.png);
+}
+
+.wechat .qrcode {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: -40px;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container div {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    background: url(../images/1.png) no-repeat center;
+    z-index: 2;
+}
+
+#container .dot2 {
+    background-image: url(../images/2.png);
+    background-size: contain;
+}
+
+#container .dot3 {
+    background-image: url(../images/3.png);
+    background-size: contain;
+}
+
+#container .dot4 {
+    background-image: url(../images/4.png);
+    background-size: contain;
+}
+
+#container .dot5 {
+    background-image: url(../images/5.png);
+    background-size: contain;
+}
+
+#container .dot6 {
+    background-image: url(../images/6.png);
+    background-size: contain;
+}
+
+.modal {
+    max-height: 70%;
+    background-color: inherit;
+    box-shadow: inherit;
+    color: #fff;
+}
+
+.modal .modal-head {
+    position: relative;
+    width: 2rem;
+    margin-right: 20px;
+}
+
+.modal-overlay {
+    background-image: url(../images/overlay.png);
+    background-color: inherit;
+}
+
+.modal-head {
+    position: relative;
+    width: 2rem;
+}
+
+.modal-content {
+    padding: 2rem;
+}
+
+.modal a {
+    color: #77d5ff;
+    text-decoration: underline;
+}
+
+.modal:not(#modal6) {
+    font-size: 1.1rem;
+}
+
+.modal:not(#modal6) .detail {
+    margin-bottom: 60px;
+}
+
+.modal:not(#modal6) h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.modal:not(#modal6) h3 {
+    color: #77d5ff;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.modal:not(#modal6) h4 {
+    font-size: 1.1rem;
+    color: #ffad10;
+}
+
+.modal:not(#modal6) .tv {
+    position: relative;
+    height: 176px;
+}
+
+.modal:not(#modal6) .tv img {
+    position: absolute;
+}
+
+.modal:not(#modal6) table {
+    font-size: 1rem;
+}
+
+.modal:not(#modal6) td,
+.modal:not(#modal6) th {
+    border: 1px solid #d9930c;
+    padding: 10px 5px;
+}
+
+.modal:not(#modal6) th {
+    color: #77d5ff;
+    font-weight: 400;
+}
+
+.modal:not(#modal6) tr:nth-child(1) {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal:not(#modal6) tr:nth-child(even) {
+    background-color: rgba(255, 152, 152, 0.4);
+}
+
+#modal6 {
+    width: 95%;
+}
+
+#modal6 dl {
+    position: relative;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    color: #fff;
+    font-size: 1.3rem;
+    padding-left: 70px;
+    margin: 0 0 12px;
+}
+
+#modal6 dl:nth-child(2) {
+    color: #77d5ff;
+    border: none;
+    background: url(../images/tableBg.png);
+    background-size: contain;
+    text-shadow: initial;
+}
+
+#modal6 dl:nth-child(3) {
+    background-color: rgba(255, 180, 0, 0.4);
+}
+
+#modal6 dl:nth-child(n+4) {
+    background-color: rgba(255, 152, 152, 0.4);
+}
+
+#modal6 .awardImg {
+    position: absolute;
+}
+
+#modal6 .awardImg.harleyIcon {
+    width: 7rem;
+    left: -13px;
+}
+
+#modal6 .awardImg.iphoneIcon {
+    width: 6rem;
+    left: 0;
+    bottom: 0;
+}
+
+#modal6 dt,
+#modal6 dd {
+    flex: 1;
+}
+
+#modal6 dt {
+    color: #f89400;
+}
+
+#modal6 dd {
+    margin-left: 0;
+}
+
+#p4 {
+    flex-direction: column;
+}
+
+
+
+.p4Bg {
+    position: absolute;
+    width: 85%;
+    height: 75%;
+    background: url(../images/p4Bg.png) no-repeat center;
+    background-size: contain;
+    z-index: -1;
+}
+
+#p4 .row {
+    margin-bottom: 0;
+}
+
+#p4 .lighter {
+    position: relative;
+}
+
+#p4 .p4Light {
+    width: 200px;
+    position: absolute;
+    z-index: -1;
+}
+
+#p4 .p4Light.light1 {
+    bottom: 15%;
+    right: 36%;
+}
+
+#p4 .p4Light.light2 {
+    top: -2%;
+    left: 40%;
+    transform: rotateY(180deg);
+}
+
+#p4 h2 {
+    text-align: left;
+}
+
+#p4 h2 img {
+    width: 170px;
+}
+
+#p4 h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: left;
+    padding-left: 5%;
+    margin: 30% -10% 5%;
+    position: relative;
+    z-index: 2;
+}
+
+#p4 h3 span {
+    color: #7ed7ff;
+    display: block;
+}
+
+#p4 h3 span i {
+    transform: translate(-4px, 4px);
+}
+
+#p4 p {
+    text-align: left;
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #p1 .mainTitle {
+        top: 18%;
+    }
+    #p1 .mainBg {
+        top: 15%;
+    }
+
+    #p2 {
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+    .ladder {
+        top: -80%;
+    }
+    #p4.swiper-slide-next {
+        pointer-events: auto;
+    }
+    #p4 .p4Light {
+        width: 380px;
+    }
+    #p4 p span {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 10px;
+    }
+    h4 {
+        margin: 36px 0 0;
+    }
+    .logo {
+        width: 12rem;
+        top: 20px;
+        left: 15%;
+    }
+
+    #p1 .mainTitle {
+        top: 23%;
+        left: 32%;
+    }
+    #p1 .mainBg {
+        transform: rotate(0);
+        width: 60%;
+        top: 5%;
+        left: 30%;
+    }
+    #p2 {
+        flex-direction: column;
+    }
+    #p2 section {
+        width: 80%;
+        top: 5%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    #p2 section:nth-child(2) {
+        top: -5%;
+    }
+    .ladder {
+        transform: rotate(0);
+        width: 100vw;
+        top: -15%;
+    }
+    .ladderBottom {
+        top: -25%;
+    }
+    #p2 section div:not(.ladder) {
+        width: 20rem;
+        min-height: 220px;
+        margin-bottom: -50px;
+    }
+    #p2 section div:not(.ladder):before {
+        width: 20rem;
+        min-height: 220px;
+    }
+    #p2 .modal-trigger {
+        padding: 40px 30px;
+    }
+
+    .modal:not(#modal6) {
+        width: 60%;
+    }
+
+    .modal:not(#modal6) .tv {
+        height: 230px;
+        transform: translateX(-30px);
+    }
+
+    .modal:not(#modal6) .info {
+        font-size: 1rem;
+    }
+    #modal6 {
+        width: 65%;
+    }
+    #modal6 dl {
+        padding-left: 120px;
+    }
+
+    #p4 .container {
+        width: 60%;
+    }
+
+    #p4 h2 img {
+        width: 220px;
+    }
+    #p4 h3 {
+        font-size: 1.2rem;
+        margin: 5% -10% 5%;
+    }
+
+    #p4 .tooltipped {
+        cursor: pointer;
+    }
+
+    #p4 .lighter {
+        width: 150px;
+    }
+    #p4 .p4Light.light1 {
+        right: 10%;
+    }
+    #p4 .p4Light.light2 {
+        top: -10%;
+        left: 4%;
+    }
+    #p4 p {
+        line-height: 2;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 1367px) {
+
+    html {
+        font-size: 16px;
+    }
+    .awardList {
+        font-size: 0.85rem;
+    }
+    /*#p1 .mainBg {
+        left: -100%;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+
+    #p1.swiper-slide-active .mainBg {
+        left: 35%;
+    }*/
+    .mainTitle {
+        width: 32rem;
+    }
+    #p1 .mainBg {
+        left: 35%;
+    }
+    #p2 section div:not(.ladder) {
+        min-height: 236px;
+    }
+    #p2 section div:not(.ladder):before {
+        min-height: 236px;
+    }
+    #p2 .modal-trigger {
+        padding: 40px;
+    }
+
+    .frame1 {
+        transform: translateY(10%);
+    }
+
+    .frame2 {
+        transform: translateY(3%);
+    }
+
+    .frame3 {
+        transform: translateY(-3%);
+    }
+
+    .frame4 {
+        transform: translateY(10%);
+    }
+
+    .frame5 {
+        transform: translateY(-2%);
+    }
+
+    .ladder {
+        top: -30%;
+    }
+    .modal:not(#modal6) {
+        top: 10%!important;
+        max-height: 80%;
+    }
+    .modal:not(#modal6) .tv {
+        height: 320px;
+    }
+
+    #modal6 dl {
+        padding-left: 160px;
+        font-size: 1.2rem;
+    }
+    #modal6 .awardImg.harleyIcon {
+        width: 11rem;
+        left: -20px;
+        bottom: 0;
+    }
+    #modal6 .awardImg.iphoneIcon {
+        width: 8rem;
+    }
+    .modal .modal-head {
+        width: 3rem;
+    }
+    .modal .modal-content {
+        padding: 3rem;
+    }
+    #p4 h2 {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    #p4 h2 img {
+        width: 238px;
+    }
+    #p4 .lighter {
+        width: 190px;
+    }
+
+    #p4 .p4Light {
+        width: 470px;
+    }
+    #p4 p {
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>优游彩神节-优游娱乐平台</title>
+    <meta name="keywords" content="优游彩神节,彩神节,优游娱乐平台" />
+    <meta name="description" content="优游彩神节是优游娱乐平台举办的行业首个大型节日庆典，线上彩票最大盛典，全民狂欢共襄盛举；彩神争霸，奔驰GLA为您加冕彩神荣耀" />
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="css/main2.css">
+    <link href="css/loading.css" rel="stylesheet" type="text/css">
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-40434172-5', 'auto');
+    ga('send', 'pageview');
+
+    setTimeout(function() {
+        var a = document.createElement("script");
+        var b = document.getElementsByTagName("script")[0];
+        a.src = document.location.protocol + "//script.crazyegg.com/pages/scripts/0051/6066.js?" + Math.floor(new Date().getTime() / 3600000);
+        a.async = true;
+        a.type = "text/javascript";
+        b.parentNode.insertBefore(a, b)
+    }, 1);
+    </script>
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load">
+        <div class="wrap">
+            <div class="bg">
+                <div class="loading">
+                    <span class="title">loading</span>
+                    <span class="text">ub8 Entertainment</span>
+                    <span class="text2">Mercedes Benz</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--loading-->
+    <div id="bodyimg"></div>
+    <!--+-->
+    <canvas id="canvas"></canvas>
+    <!--+-->
+    <div id="loginBlock">
+        <div class="container row">
+            <form class="col s12 l6 offset-l3 xl4 offset-xl4">
+                <div id="firstChild" class="center" style="position:relative;">
+                    <img src="images/close.png" class="responsive-img right" id="close" />
+                    <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="input-field col s12 myform">
+                    <input id="account" type="text" class="validate">
+                    <label for="account">账号</label>
+                </div>
+                <div class="input-field col s12 myform">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">密码</label>
+                </div>
+                <div class="center myform">
+                    <button class="btn waves-effect waves-light amber darken-2" onclick="APILib.doLogin('account', 'password')" type="submit" id="doLoginBtn">登录</button>
+                    <a class="signUp" href="https://www.ub8one.com/linkerror.html" target="_blank">立即注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <div id="logoutBlock">
+        <div class="container row">
+            <div class="input-field col s6 offset-s6 right-align"> <span id="name"></span>
+                <button class="btn waves-effect waves-light amber darken-2" onclick="APILib.doLogout();reloadPage()">登出</button>
+            </div>
+        </div>
+    </div> -->
+    <!-- Swiper -->
+    <div class="logo"><a href="https://www.ub8zone.com/" target="_blank"><img src="images/logo.png"></a></div>
+    <div class="extendBtn only-on-labtop" style="display: none"><a href="http://next.ub8fun.com/caishen/extendPage.html" target="_blank"><img src="images/rankingIcon.png"><span>点击查看<br>彩神榜</span></a></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="extendBtn only-on-mob-to-tab" style="display: none"><a href="http://next.ub8fun.com/caishen/extendPage.html" target="_blank"><img class="responsive-img" src="images/rankingIcon.png"><span>点击查看<br>彩神榜</span></a></div>
+            <div class="swiper-slide" id="p1">
+                <div class="container c1">
+                    <div class="leftBg">
+                        <img class="p1Bg_left" src="images/p1Bg_left.png">
+                    </div>
+                    <div class="main">
+                        <img class="responsive-img shine" src="images/shine.png">
+                        <img class="responsive-img mainLogo" src="images/mainLogo.png">
+                        <img class="responsive-img gold" src="images/gold.png">
+                        
+                        <div class="text left-align">
+                            <p id="info">线上彩票最大盛典，全民狂欢共襄盛举
+                                <br>彩神争霸，奔驰GLA为您加冕彩神荣耀
+                            </p>
+                            <div class="time row">
+                                <div class="col s4 m2 l2 offset-m1 offset-l1 step"><span>9/28-10/31</span>彩神节网页报名
+                                </div>
+                                <div class="col s4 m2 l2 step"><span>9/29-10/4</span>领彩神邀请红包
+                                </div>
+                                <div class="col s4 m2 l2 step"><span>10/2-/10/13</span>加微信抽iPhoneX
+                                </div>
+                                <div class="col s4 m2 l2 step"><span>10/18-10/31</span>领彩神开启红包
+                                </div>
+                                <div class="col s4 m2 l2 step"><span>10/18-10/31</span>彩神争霸赛送奔驰
+                                </div>
+                            </div>
+                        </div>
+                        <img src="images/outoftime.png">
+                    </div>
+                    <div class="rightBg">
+                        <img class="p1Bg_right" src="images/p1Bg_right.png">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="p2">
+                <div class="container c2">
+                    <div class="p2Bg"></div>
+                    <div class="main">
+                        <div class="row">
+                            <div class="col s12">
+                                <h2>优游娱乐11年专注彩票
+                                    <br>线上彩票领航品牌</h2>
+                            </div>
+                            <div class="col s12">
+                                <p>以UBET集团公司为背景依托，传承自UBET优博在线娱乐，专业彩票平台，独创百十模式，3大独创奖池周周爆大奖，充提快速，安全稳定。</p>
+                            </div>
+                            <div class="col s12">
+                                <div class="row middle">
+                                    <div class="col s6 m4"><span class="span1">每日派奖</span>
+                                        <br>
+                                        <img class="responsive-img 4000w p2img" src="images/4000.png"></div>
+                                    <div class="col s6 m4"><span class="span2">注册人数</span>
+                                        <br>
+                                        <img class="responsive-img 40w p2img" src="images/40.png"> </div>
+                                    <div class="col s6 offset-s3 m4 "><span class="span3">奖池派奖超</span>
+                                        <br><img class="responsive-img 2000w p2img" src="images/2000.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <h3>优游彩神节，英雄齐聚
+                                    <br>彩票界最大赛事，期待您的参与</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="p3">
+                <div class="container c3">
+                    <img class="responsive-img p3Bg" src="images/p3Bg.png" alt="">
+                    <div class="mainT left-align">
+                        <h2 class="hide-on-small-only">
+                            <img class="responsive-img" src="images/p3Title1.png"><br>
+                            <img class="responsive-img" src="images/p3Title2.png">
+                            <p>经典与经典的碰撞，彩神与豪车的完美结合，<br>
+煮酒论英雄，望“梅”止渴，奔驰GLA为你加冕彩神荣耀</p>
+
+                        </h2>
+                        <div class="text">
+                            <h3>活动一：彩神争霸赛开启红包</h3>
+                            <p>9月28至10月31日，报名过彩神节且17/1/1至17/10/16，充值投注都≥100元（双平台彩票+老虎机）的会员，领取争霸赛¥18开启红包（红包派发日期10/18、10/20、10/25、10/27、11/01，每位用户活动期间可领取一次红包）。
+                            </p>
+                            <p class="show-on-small" style="display: none">充值投注都≥100元（双平台彩票+老虎机）的会员</p>
+                            <h3>活动二：梅赛德斯 · 彩神争霸赛</h3>
+                            <p>四大优游彩神，送1台奔驰GLA、3台奔驰Smart（所有奔驰都由梅赛德斯倾情赞助）9月28至10月31日，报名过彩神节，活动数据计算时间：10/18至10/31。
+                            </p>
+                            <p class="show-on-small" style="display: none">四大优游彩神，送以下</p>
+                            <ul class="show-on-small-to-medium" style="display: none">
+                                <li><span>奔驰GLA-</span>优游彩神：活动时间内，全平台累积盈利最高的会员
+                                    <p class="txetWhite cutElm">计算规则：累积活动期间内，每日用户的盈利金额（盈利=中奖-投注，双平台所有端口设备，彩票+老虎机），如某日用户亏损，则该天不算入盈利累积。例如：10月18日会员A盈利100万，10月19日会员A亏损50万，则这该会员在榜单的累积盈利=100万+0=100万。
+                                    </p>
+                                </li>
+                                <li><span>奔驰Smart-</span>老虎机彩神：活动间内，老虎机累积盈利最高的会员
+                                    <p class="txetWhite cutElm">计算规则：与优游彩神计算方式一致，只是投注仅计算老虎机，不含彩票。</p>
+                                </li>
+                                <li><span>奔驰Smart-</span>手机日赚彩神：活动期间内，手机单日盈利最高的会员
+                                    <p class="txetWhite cutElm">活动期间内，手机单日盈利最高的会员。计算规则：手机端指（1.0手机浏览器+5.0Android+5.0iOS），从10/18至10/31，单日盈利金额最高的会员（盈利=中奖-投注）例如：从10/18至10/31（总计14天内），会员A在10/20手机盈利100万，活动10/31结束后，在所有会员的单日手机盈利中排名第一，那么会员A就是手机日赚彩神。
+                                    </p>
+                                </li>
+                                <li><span>奔驰Smart-</span>单期盈利倍数彩神：活动期间内，单期盈利倍数最高的会员
+                                    <p class="txetWhite cutElm">计算规则：单期最低投注金额2元。所有彩票彩种和玩法（盈利=中奖-投注，双平台所有端口设备），单期盈利倍数=单期中奖金额÷单期投注金额。</p>
+                                </li>
+                            </ul>
+                            <ul class="show-on-big">
+                                <li><span>奔驰GLA-</span>优游彩神：活动时间内，全平台累积盈利最高的会员。
+                                    <p class="txetWhite">计算规则：累积活动期间内，每日用户的盈利金额（盈利=中奖-投注，双平台所有端口设备，彩票+老虎机），如某日用户亏损，则该天不算入盈利累积。例如：10月18日会员A盈利100万，10月19日会员A亏损50万，则这该会员在榜单的累积盈利=100万+0=100万。
+                                    </p>
+                                </li>
+                                <li><span>奔驰Smart-</span>老虎机彩神：活动间内，老虎机累积盈利最高的会员。
+                                    <p class="txetWhite">计算规则：与优游彩神计算方式一致，只是投注仅计算老虎机，不含彩票。</p>
+                                </li>
+                                <li><span>奔驰Smart-</span>手机日赚彩神：活动期间内，手机单日盈利最高的会员。
+                                    <p class="txetWhite">计算规则：手机端指（1.0手机浏览器+5.0Android+5.0iOS），从10/18至10/31，单日盈利金额最高的会员（盈利=中奖-投注）例如：从10/18至10/31（总计14天内），会员A在10/20手机盈利100万，活动10/31结束后，在所有会员的单日手机盈利中排名第一，那么会员A就是手机日赚彩神。
+                                    </p>
+                                </li>
+                                <li><span>奔驰Smart-</span>单期盈利倍数彩神：活动期间内，单期盈利倍数最高的会员。
+                                    <p class="txetWhite">计算规则：单期最低投注金额2元。所有彩票彩种和玩法（盈利=中奖-投注，双平台所有端口设备），单期盈利倍数=单期中奖金额÷单期投注金额。</p>
+                                </li>
+                            </ul>
+                            <p>*比赛榜单会在彩神节活动网页内，隔天更新*
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide show-on-big" id="p3-1">
+                <div class="container c3-1">
+                    <div class="leftBg"><img class="responsive-img light_l" src="images/light_l.png" id="light_l"></div>
+                    <div class="rightBg">
+                        <img class="responsive-img RankingBg" src="images/RankingBg.png">
+                        <img class="responsive-img light_r" src="images/light_r.png" id="light_r">
+                    </div>
+                    <div class="main">
+                        <img class="responsive-img RankingPic" src="images/RankingPic.png" id="rankingPic">
+                        <div class="mainT row" id="exTable"></div>
+                        <div class="mainB">
+                            <div class="p3-1_info">
+                                <h3>中奖说明：</h3>
+                                <p>1.优游彩神、老虎机彩神和手机日赚彩神，按照盈利进行排序
+                                    <br>2.单期盈利倍数彩神，先以倍数排序，如倍数一样，则按单期投注金额排序
+                                    <br>3.如多名会员并列第一，则奔驰车会自动折现，并平均派发至5.0资金账户（奔驰车型：GLA 200 动感型和Smart Fortwo，折现报价以奔驰官方价格为准）
+                                    <br>4.如多名会员并列其他名次，则分别都获得该名次奖金。例如：会员A和会员B并列优游彩神第2名，则其A和B都获得礼金¥38,888，之后会员C获得优游彩神第3名，获得礼金¥28,888。</p>
+                            </div>
+                            <div class="p3-1_info">
+                                <h3>领取时间：</h3>
+                                <p>红包派发日期：10/18、10/20、10/25、10/27、11/1（每日早上11点至凌晨23点59分），争霸赛礼金将在活动结束后1-3天内派发，奔驰车派发请活动结束后，中奖彩神与客服联系领取。</p>
+                            </div>
+                            <div class="p3-1_info">
+                                <h3>奖励派发：</h3>
+                                <p>红包和礼金将派发至5.0资金账户，奔驰车请联系客服领取</p>
+                            </div>
+                            <p class="specialC">*禁止同ip等任何作弊行为，一经发现平台将取消参与资格，严重者将被冻结账号处理；</p>
+                            <p class="specialC">*优游娱乐拥有本次活动最终解释权和裁决权。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="p4">
+                <div class="container c4">
+                    <div class="leftBg"><img class="responsive-img p4Bg_left" src="images/p4Bg_left.png"></div>
+                    <div class="main">
+                        <div class="row">
+                            <div class="timeLine-wrap">
+                                <div class="timeLine-title hide-on-med-and-down"><img class="responsive-img" src="images/p4Coin.png"></div>
+                                <div class="timeLine-content">
+                                    <div class="col s12 m12 l6" id="t1">
+                                        <span class="period">9/29-10/4</span>
+                                        <div class="single-content"><img class="responsive-img p4Title1" src="images/p4Title1.png">
+                                            <div class="hide-on-small-only">
+                                                <p>登录5.0网页或电脑客户端，领取红包</p>
+                                                <span><a class="activities1" href="https://www.ub8fun.com/event/page/152" target="_blank">活动详情</a></span></div>
+                                            <div class="show-on-small">
+                                                <p>登录5.0网页或电脑客户端，领取红包 ...<span><a class="activities1" href="https://www.ub8fun.com/event/page/152" target="_blank">活动详情</a></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m12 l6" id="t2">
+                                        <span class="period">10/2-10/13</span>
+                                        <div class="single-content"><img class="responsive-img p4Title2" src="images/p4Title2.png">
+                                            <div class="hide-on-small-only">
+                                                <p>彩神节活动网页报名，关注优游微信公众号，抽iPhoneX、iPhone8、现金。
+                                                </p><span><a class="activities2" href="https://www.ub8fun.com/event/page/154" target="_blank">活动详情</a></span></div>
+                                            <div class="show-on-small">
+                                                <p>彩神节活动网页报名，抽iPhoneX ...。<span><a class="activities2" href="https://www.ub8fun.com/event/page/154" target="_blank">活动详情</a></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m12 l6" id="t3">
+                                        <span class="period">10/18-10/31</span>
+                                        <div class="single-content"><img class="responsive-img p4Title3" src="images/p4Title3.png">
+                                            <div class="hide-on-small-only">
+                                                <p>彩神活动网页报名，成为优游盈利彩神、老虎机盈利彩神、手机日赚彩神、单期盈利倍数彩神。大奖奔驰GLA，奔驰Smart，还有更多豪礼，详细规则，敬请期待！</p><span><a class="activities3" href="https://www.ub8fun.com/event/page/158" target="_blank">活动详情</a></span></div>
+                                            <div class="show-on-small">
+                                                <p>大奖奔驰GLA，奔驰Smart，还有更多豪礼 ...<span><a class="activities3" href="https://www.ub8fun.com/event/page/158" target="_blank">活动详情</a></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m12 l6" id="t4">
+                                        <span class="period">10/18-10/31</span>
+                                        <div class="single-content"><img class="responsive-img p4Title4" src="images/p4Title4.png">
+                                            <div class="hide-on-small-only">
+                                                <p>报名彩神节，领取争霸赛开启红包。
+                                                </p><span><a class="activities4" href="https://www.ub8fun.com/event/page/158" target="_blank">活动详情</a></span></div>
+                                            <div class="show-on-small">
+                                                <p>报名彩神节，领取争霸赛开启红包 ...<span><a class="activities4" href="https://www.ub8fun.com/event/page/158" target="_blank">活动详情</a></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m12 l6" id="t5">
+                                        <span class="period">10/18-10/31</span>
+                                        <div class="single-content"><img class="responsive-img p4Title5" src="images/p4Title5.png">
+                                            <div class="hide-on-small-only">
+                                                <p>参与彩神节投注送，与彩神争霸赛流水共享，获得礼金更豪取奔驰GLA，快来参加！
+                                                </p><span><a class="activities5" href="https://www.ub8fun.com/event/page/160" target="_blank">活动详情</a></span></div>
+                                            <div class="show-on-small">
+                                                <p>参与彩神节投注送，与彩神争霸赛 ...<span><a class="activities5" href="https://www.ub8fun.com/event/page/160" target="_blank">活动详情</a></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m12 l6" id="t6">
+                                        <span class="period">10/20-11/1</span>
+                                        <div class="single-content"><img class="responsive-img p4Title6" src="images/p4Title6.png">
+                                            <div class="hide-on-small-only">
+                                                <p>关注优游微信公众号，参与彩神节评论，赢取微信专属礼品。
+                                                </p><span><a class="activities6" href="https://mp.weixin.qq.com/s?__biz=MzAxNzczOTAwMA==&mid=2663774892&idx=1&sn=e3391937709eed8cb8179109acdb5101&chksm=80d1a73bb7a62e2d9a88a06ce74afa5b700dc321d6a4d5350ec436843cc3b68d496d1eaf7004#rd" target="_blank">活动详情</a></span></div>
+                                            <div class="show-on-small">
+                                                <p>关注优游微信公众号，参与 ...<span><a class="activities6" href="https://mp.weixin.qq.com/s?__biz=MzAxNzczOTAwMA==&mid=2663774892&idx=1&sn=e3391937709eed8cb8179109acdb5101&chksm=80d1a73bb7a62e2d9a88a06ce74afa5b700dc321d6a4d5350ec436843cc3b68d496d1eaf7004#rd" target="_blank">活动详情</a></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightBg"><img class="responsive-img p4Bg_right" src="images/p4Bg_right.png"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination hide-on-small-only" id="nav">
+        </div>
+        <div class="join">
+            <!-- <div><a class="smallBtn loginBtn" href="#">立即报名</a></div> -->
+            <a class="qqBtn" href="#" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=43641678&site=qq&menu=yes','_blank','location=yes,height=570,width=520,scrollbars=yes,status=yes');"><i class="fa fa-qq fa-lg" aria-hidden="true"></i><br>QQ</a>
+            <a class="activeBtn" href="https://www.ub8one.com/linkerror.html" target="_blank"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i><br>注册</a>
+        </div>
+        <div class="smallQ hide-on-small-only">
+            <img src="images/smallQ.png">
+            <p>下载手机版
+                <br>参与更多活动</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/api_lib.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/pace.min.js"></script>
+    <!--+-->
+    <script type="text/javascript" src="js/animation2.js"></script>
+    <script type="text/javascript" src="js/SplitText.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.logo').on('click', function() {
+            ga('send', 'event', '优游官网', '前往官网');
+        });
+        $('.smallBtn.loginBtn').on('click', function() {
+            ga('send', 'event', '报名按钮小', '报名');
+        });
+        $('.btn.pulse.loginBtn').on('click', function() {
+            ga('send', 'event', '报名按钮大', '报名');
+        });
+        $('#doLoginBtn').on('click', function() {
+            ga('send', 'event', '登录按钮', '登录');
+        });
+        $('.signUp').on('click', function() {
+            ga('send', 'event', '立即注册', '注册');
+        });
+        $('.activeBtn').on('click', function() {
+            ga('send', 'event', '注册', '注册');
+        });
+        $('.qqBtn').on('click', function() {
+            ga('send', 'event', 'qq按钮', 'qq');
+        });
+        $('.activities1').on('click', function() {
+            ga('send', 'event', '活动详情1', '外部连结');
+        });
+        $('.activities2').on('click', function() {
+            ga('send', 'event', '活动详情2', '外部连结');
+        });
+        $('.activities3').on('click', function() {
+            ga('send', 'event', '活动详情3', '外部连结');
+        });
+        $('.activities4').on('click', function() {
+            ga('send', 'event', '活动详情4', '外部连结');
+        });
+        $('.activities5').on('click', function() {
+            ga('send', 'event', '活动详情5', '外部连结');
+        });
+        $('.activities6').on('click', function() {
+            ga('send', 'event', '活动详情6', '外部连结');
+        });
+        $('.extendBtn').on('click', function() {
+            ga('send', 'event', '彩神榜按钮', '看榜');
+        });
+        $('#exTable').load('extendTable.php');
+
+
+        //閱讀更多
+        var cutElm = $('.cutElm'),
+            cutCount,
+            openTxt = '… 继续阅读',
+            closeTxt = '[×] 关闭',
+            windoWidth = $(window).width();
+        if (windoWidth > 768) {
+            cutCount = 40;
+        } else {
+            cutCount = 15;
+        }
+        cutElm.each(function() {
+            var self = $(this),
+                selfText = self.text(),
+                textLength = selfText.length,
+                textTrim = selfText.substr(0, cutCount);
+
+            function textTrimming() {
+                self.html(textTrim + '<a href="javascript:void(0);" class="textOpen">' + openTxt + '</a>').css({ visibility: 'visible' });
+
+                self.find('.textOpen').on('click', function() {
+                    self.html(selfText).append('<a href="javascript:void(0);" class="textClose">' + closeTxt + '</a>');
+
+                    self.find('.textClose').on('click', function() {
+                        textTrimming();
+                    });
+                });
+            }
+
+            if (cutCount < textLength) {
+                textTrimming();
+            } else if (cutCount >= textLength) {
+                self.css({ visibility: 'visible' });
+            }
+        });
+
+        $("#close").hover(
+            function() {
+                $(this).attr("src", "images/closeHover.png");
+            },
+            function() {
+                $(this).attr("src", "images/close.png");
+            }
+        );
+        $(".loginBtn").click(function() {
+            TweenMax.to("#loginBlock", 1, { opacity: 1 });
+            //$("body").css("overflow-y", "hidden");
+            $("#loginBlock").css("z-index", 20);
+        });
+
+        $("#close").click(function() {
+            TweenMax.to("#loginBlock", 1, { opacity: 0 });
+            //$("body").css("overflow-y", "auto");
+            $("#loginBlock").css("z-index", 0);
+            $(".redAlert").hide();
+        });
+
+        var doLoginBtn = $('#doLoginBtn');
+        doLoginBtn.on('click submit', function(e) {
+            e.preventDefault();
+            APILib.doLogin('account', 'password');
+        });
+
+        function reloadPage() {
+            location.reload();
+        }
+
+        /*登入登出*/
+        function switchLogInOut() {
+            if (APILib.isLogin()) {
+                $("#loginBlock").hide();
+                //$("body").css("overflow-y", "scroll");
+                //$("#name").text('hello!   ' + APILib.getCookie("nickName"));
+                APILib.doJoin(143, 'Web');
+                APILib.queryJoinLogPersonal(143);
+            }
+        }
+
+        function alertNeedLogin() {
+            switchLogInOut();
+            $("#firstChild").prepend('<div class="redAlert">请先登录</div>');
+            TweenMax.to("#loginBlock", 1, { opacity: 1 });
+            //$("body").css("overflow-y", "hidden");
+            $("#loginBlock").css("z-index", 20);
+            //alert("请先登入");
+        }
+
+        function alertError(e) {
+            if ($(".redAlert").length > 0) {
+                $(".redAlert").text("账号密码输入错误");
+            } else {
+                $("#firstChild").prepend('<div class="redAlert">账号密码输入错误</div>');
+            }
+            // alert("帐号密码输入错误");
+        }
+        /*查询登入时间*/
+        function showLoginLog(e) {
+            $("#LoginLogList>li").remove();
+            for (item in e.detail) {
+                $("#LoginLogList").append("<li>" + new Date(e.detail[item].maxLoginTime) + " PF:" + e.detail[item].platformType + " Device:" + e.detail[item].deviceType);
+                /*$("#Betting").text(e.detail[0].deviceType);*/
+            }
+        }
+
+        function joinSuccess() {
+            //reloadPage();
+            $(".logIn").hide();
+            $(".logIn-success").show();
+            $(".join").find('div').html('<a class="smallBtn disabled">完成报名</a>');
+        }
+
+        function joinCheck(e) {
+            if (null !== e.detail) {
+                $(".logIn").hide();
+                $(".logIn-success").show();
+            }
+        }
+
+        function showLog(e) {
+            console.log(e.status);
+        }
+
+        // JS库会触发的事件
+        window.addEventListener("LoginChange", switchLogInOut);
+        window.addEventListener("NeedLogin", alertNeedLogin);
+        window.addEventListener("ID", showLog);
+        window.addEventListener("LoginLog", showLoginLog);
+        window.addEventListener("APIError", alertError);
+        window.addEventListener("Join", joinSuccess);
+        window.addEventListener("JoinLog", joinCheck);
+        window.addEventListener("WinAmount", showLog);
+        window.addEventListener("BetMultiple", showLog);
+
+        switchLogInOut();
+    });
+    </script>
+</body>
+
+</html>

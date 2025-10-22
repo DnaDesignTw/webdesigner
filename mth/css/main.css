@@ -1,0 +1,266 @@
+@charset "UTF-8";
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+    letter-spacing: 1px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: none;
+    border: 2px solid #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #50d1c5;
+    border: 2px solid #50d1c5;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    right: 20px;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 20px 0;
+}
+
+.qrcode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8rem;
+    z-index: 9;
+}
+
+.logo {
+    width: 11rem;
+}
+
+.phone {
+    position: relative;
+}
+
+.phone img {
+    position: absolute;
+}
+
+.rightText {
+    text-align: left;
+}
+
+#p1 .logo {
+    position: absolute;
+}
+
+#p1 section {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    transform: translateY(-10%);
+}
+
+#p1 section div:not(.phone) {
+    transform: translateY(-20%);
+}
+
+#p1 span {
+    display: block;
+    font-size: 1.2rem;
+}
+
+#p1 .phone {
+    width: 10rem;
+}
+
+#p1 .phone img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#p1 .phone .light {
+    mix-blend-mode: hard-light;
+    -webkit-filter: hue-rotate(0deg) saturate(0.8);
+    filter: hue-rotate(0deg) saturate(0.8);
+}
+
+#p1 .phone h2 {
+    margin: 320px -85px 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.6rem;
+}
+
+#p2 .p2Bg .ballB,
+#p2 .p2Bg .ballS {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/ballS.png) no-repeat center;
+    background-size: contain;
+}
+
+#p2 .p2Bg .ballB {
+    background-image: url(../images/ballB.png);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+}
+
+#p2 .p2Bg .ballS {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+}
+
+#p2 section {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    transform: translateY(-10%);
+}
+
+#p2 .phone {
+    width: 15rem;
+}
+
+#p2 .phone img {
+    top: -30px;
+    left: 0;
+}
+
+#p2 .p2phoneL {
+    opacity: 0;
+}
+
+#p3 .phone {
+    width: 20rem;
+    position: absolute;
+    left: 0;
+    opacity: 0.2;
+}
+
+#p3 .phone img {
+    left: 0;
+}
+
+#p3 .blockRight {
+    position: absolute;
+    top: 25%;
+}
+
+#p3 .rightText {
+    transform: translateY(20%);
+}
+
+#p3 li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1280px) {
+
+    .logo {
+        width: 15rem;
+    }
+    #p1 .phone {
+        width: 14rem;
+    }
+    #p1 section div:not(.phone) {
+        margin: 0px 10px;
+        transform: translateY(-60%);
+    }
+    #p1 .phone h2 {
+        margin: 410px -85px 0;
+    }
+
+    #p3 .phone {
+        width: 24rem;
+        height: 430px;
+        opacity: 1;
+    }
+
+
+    #p3 .blockRight {
+        top: 15%;
+        right: 20%;
+    }
+    #p3 ul {
+        transform: translateX(75px);
+    }
+    #p3 li {
+        margin-bottom: 24px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    html {
+        font-size: 18px;
+    }
+
+    #p1 .phone {
+        width: 15rem;
+    }
+    #p1 .phone h2 {
+        margin: 550px -85px 0 -80px;
+        letter-spacing: 1rem;
+    }
+    #p2 section {
+        width: 900px;
+    }
+
+    #p2 .phone {
+        width: 18rem;
+    }
+
+    #p2 .rightText p {
+        font-size: 0.9rem;
+        margin: 2rem 0;
+        line-height: 1.8rem;
+    }
+    #p3 .phone {
+        width: 28rem;
+    }
+
+    #p3 .blockRight {
+        top: 20%;
+    }
+    #p3 li {
+        font-size: 1rem;
+    }
+}

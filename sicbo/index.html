@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>作品七</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+    <div id="load"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="p1">
+                <div class="mainBg"></div>
+                <div class="diceBg float50"></div>
+                <header class="logo">
+                    <a href="../index.php"><img class="ub8" src="images/logo.png" alt="优游彩票"></a>
+                </header>
+                <main>
+                    <div class="tableBg">
+                        <img src="images/tableBg.png" alt="">
+                    </div>
+                    <div class="goldPowder left">
+                        <img src="images/goldPowder.png" alt="">
+                    </div>
+                    <div class="goldPowder right">
+                        <img src="images/goldPowder.png" alt="">
+                    </div>
+                    <div class="dices">
+                        <img class="dice1" src="images/dice.png" alt="">
+                        <img class="dice2" src="images/dice.png" alt="">
+                        <img class="dice3" src="images/dice.png" alt="">
+                    </div>
+                    <h1>
+                        <img src="images/h1.png" alt="">
+                    </h1>
+                </main>
+                <div class="scrollDown">
+                    <img src="images/scrollDown.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide" id="p2">
+                <div class="mainBg"></div>
+                <div class="diceBg float50"></div>
+                <section class="features">
+                    <div class="feature f1">
+                        <h2>
+                            <img class="sicboTitle" src="images/sicboTitle.png" alt="">
+                            <p><b>首个</b>全新<b>自主研发</b>赌桌游戏</p>
+                            <img class="time" src="images/1128text.png" alt="11月17日震撼上线！"
+                                style="mix-blend-mode: overlay;">
+                        </h2>
+                    </div>
+                    <div class="feature f2">
+                        <h3>骰宝奖金赔率<b>业内最高</b>，最高赔付上限<b>50万！</b>
+                            <span class="line"></span>
+                            <span class="circle"></span>
+                        </h3>
+                        <img src="images/coin.png" alt="">
+                    </div>
+                    <div class="feature f3">
+                        <h3>实景赌桌游戏设计，让您<b>身临其境</b>，激情无限！
+                            <span class="line"></span>
+                            <span class="circle"></span>
+                        </h3>
+                        <img src="images/table.png" alt="">
+                    </div>
+                </section>
+                <footer class="feature f4">
+                    <h3><b>独家</b>骰宝路子图，便于观察走势，大幅<b>增加赢率！</b>
+                        <span class="line"></span>
+                        <span class="circle"></span>
+                    </h3>
+                    <img src="images/chart.jpg" alt="">
+                </footer>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/pace.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            TweenMax.to("#load", 2, { opacity: 0, ease: "easeBounce.easeOut", display: "none" }, 0);
+
+            var p1Hover = new TimelineMax({ paused: true });
+            p1Hover
+                .to(".goldPowder", 0.6, { z: 120, ease: Power3.easeOut })
+                .to("h1", 0.6, { z: 100, ease: Power3.easeOut }, 0)
+                .to(".dices", 0.6, { z: 50, ease: Power3.easeOut }, 0)
+
+            $("main").on("mouseenter",
+                function () {
+                    p1Hover.play();
+                });
+            $("main").on("mouseleave",
+                function () {
+                    p1Hover.reverse().timeScale(2);
+                });
+
+            var p2Hover = new TimelineMax({ paused: true });
+            p2Hover
+                .to(".f1", 0.6, { z: 30, ease: Power3.easeOut }, 0)
+                .to(".f3", 0.6, { z: 50, ease: Power3.easeOut }, 0)
+                .to(".f2", 0.6, { z: 100, ease: Power3.easeOut }, 0)
+
+            $("section").on("mouseenter",
+                function () {
+                    p2Hover.play();
+                });
+            $("section").on("mouseleave",
+                function () {
+                    p2Hover.reverse().timeScale(2);
+                });
+
+            var dice1MovementX = 0;
+            var dice1MovementY = 0;
+            var dice2MovementX = 0;
+            var dice2MovementY = 0;
+            var dice3MovementX = 0;
+            var dice3MovementY = 0;
+
+            function setMovement() {
+                var width = $(window).width();
+                if (width < 481) {
+                    dice1MovementX = -50;
+                    dice1MovementY = 240;
+                    dice2MovementX = -150;
+                    dice2MovementY = -180;
+                    dice3MovementX = 50;
+                    dice3MovementY = -100;
+                } else if (width >= 481 && width < 1900) {
+                    dice1MovementX = -350;
+                    dice1MovementY = 240;
+                    dice2MovementX = -450;
+                    dice2MovementY = -120;
+                    dice3MovementX = 350;
+                    dice3MovementY = -150;
+                } else {
+                    dice1MovementX = -500;
+                    dice1MovementY = 320;
+                    dice2MovementX = -550;
+                    dice2MovementY = -200;
+                    dice3MovementX = 550;
+                    dice3MovementY = -200;
+                }
+            }
+
+            setMovement();
+
+            var p1 = new TimelineMax({ delay: 0.5 });
+            p1
+                .set(".dices", { scale: 5, y: -100, z: 200 })
+                .set(".goldPowder", { scale: 0 })
+                .set("#p1 .diceBg", { rotation: -90, scale: 0, z: 0 })
+                .to(".dices", 0.6, { opacity: 1, y: 0, z: 0, scale: 1, ease: Power3.easeIn })
+                .to([".tableBg", "h1"], 0.3, { opacity: 1, ease: Power3.easeOut }, 0.6)
+                .to(".dice1", 0.5, { x: dice1MovementX, y: dice1MovementY, rotation: 45, ease: Elastic.easeOut.config(1, 0.5) }, 0.6)
+                .to(".dice2", 0.5, { x: dice2MovementX, y: dice2MovementY, rotation: 90, ease: Elastic.easeOut.config(1, 0.5) }, 0.6)
+                .to(".dice3", 0.5, { x: dice3MovementX, y: dice3MovementY, rotation: -90, ease: Elastic.easeOut.config(1, 0.5) }, 0.6)
+                .to(".goldPowder.left", 0.3, { scale: 1, x: -200, opacity: 1, transformOrigin: "right", ease: Power3.easeOut }, 0.6)
+                .to(".goldPowder.right", 0.3, { scale: 1, x: -dice1MovementX, y: -400, opacity: 1, transformOrigin: "left", ease: Power3.easeOut }, 0.6)
+                .to("#p1 .diceBg", 0.2, { rotation: 0, opacity: 1, scale: 1, z: 380 }, 0.6)
+                .to([".logo", ".scrollDown"], 0.5, { opacity: 1, ease: Power3.easeOut }, 1)
+                .to(".scrollDown", 1, { opacity: 0, yoyo: true, repeat: -1, repeatDelay: 0.5 }, 1.5)
+
+            var p2 = new TimelineMax({ pasued: true });
+            p2
+                .set([".feature", "#p2 .diceBg"], { opacity: 0 })
+                .set("#p2 .diceBg", { scale: 1.6 })
+                .set(".f1", { scale: 2, x: 500, y: 200 })
+                .to(".f1", 0.3, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power2.easeOut }, 0.2)
+                .to("#p2 .diceBg", 0.2, { opacity: 1 }, 0.3)
+                .staggerTo(".feature:not(.f1)", 0.8, { opacity: 1, ease: Power2.easeOut }, 0.4, 0.6)
+                .fromTo(".line", 1, { scaleY: 0 }, { scaleY: 1, transformOrigin: "bottom left", repeat: -1, ease: Power2.easeOut })
+
+            $(window).on('resize', function () {
+                setMovement();
+                p1
+                    .kill(null, [".dice1", ".dice2", ".dice3"])
+                    .to(".dice1", 0.5, { x: dice1MovementX, y: dice1MovementY, rotation: 45, ease: Elastic.easeOut.config(1, 0.5) }, 0.6)
+                    .to(".dice2", 0.5, { x: dice2MovementX, y: dice2MovementY, rotation: 90, ease: Elastic.easeOut.config(1, 0.5) }, 0.6)
+                    .to(".dice3", 0.5, { x: dice3MovementX, y: dice3MovementY, rotation: -90, ease: Elastic.easeOut.config(1, 0.5) }, 0.6)
+                p1.restart();
+
+            });
+
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                direction: 'vertical',
+                // speed: 1000,
+                // longSwipesMs: 1000,
+                effect: 'fade',
+                // longSwipes: false,
+                slidesPerView: 1,
+                simulateTouch: false,
+                mousewheelControl: true,
+                onSlideChangeStart: function (swiper) {
+                    var page = (swiper.activeIndex);
+                    switch (page) {
+                        case 0:
+                            p2.pause();
+                            p1.restart();
+                            break;
+                        case 1:
+                            p1.pause();
+                            p2.restart();
+                            break;
+                    }
+                },
+            });
+
+            $(document).mousemove(function (event) {
+                var cx = Math.ceil($(window).width() / 1.8);
+                var cy = Math.ceil($(window).height() / 1.8);
+                var dx = event.pageX - cx;
+                var dy = event.pageY - cy;
+
+                var tiltx = dy / cy;
+                var tilty = -(dx / cx);
+                var radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
+                var degree = radius * 20;
+                var degree2 = radius * 5;
+
+                TweenMax.set("main", { transform: "rotate3d(" + -tiltx + ", " + -tilty + ", 0, " + degree + "deg)" })
+                TweenMax.set(".features", { transform: "rotate3d(" + -tiltx + ", " + -tilty + ", 0, " + degree2 + "deg)" })
+            });
+
+            $(".swiper-slide").mousemove(function (e) {
+                parallaxIt(e, ".float50", -50);
+            });
+
+            function parallaxIt(e, target, movement) {
+                var $this = $(".swiper-slide");
+                var relX = e.pageX - $this.offset().left;
+                var relY = e.pageY - $this.offset().top;
+
+                TweenMax.to(target, 1, {
+                    x: (relX - $this.width() / 2) / $this.width() * movement,
+                    y: (relY - $this.height() / 2) / $this.height() * movement
+                });
+            }
+
+        })
+    </script>
+</body>
+
+</html>

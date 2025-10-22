@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>作品二</title>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/loading.css" rel="stylesheet" type="text/css" />
+    <link href="css/materialize.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="load"></div>
+    <div class="mainBg"></div>
+    <div class="mainBgFliter mainBgFliter1"></div>
+    <div class="mainBgFliter mainBgFliter2"></div>
+    <div class="mainBgFliter mainBgFliter3"></div>
+    <div class="mainBgFliter mainBgFliter4"></div>
+    <div class="mainBgFliter mainBgFliter5"></div>
+    <div class="mainBgFliter mainBgFliter6"></div>
+    <div class="mainBgFliter mainBgFliter7"></div>
+    <div id="loginPage">
+        <div class="container row">
+            <div class="col s12 m6 offset-m3 l4 offset-l4">
+                <div id="firstChild" class="center" style="position:relative;">
+                    <img src="images/close.png" class="responsive-img right" id="close" />
+                    <i class="small material-icons myform">person_pin</i>
+                </div>
+                <div class="input-field col s12 myform">
+                    <input placeholder="请输入平台帐号" id="account" type="text" class="validate">
+                    <label for="account">账号</label>
+                </div>
+                <div class="input-field col s12 myform">
+                    <input placeholder="请输入平台密码" id="password" type="password" class="validate">
+                    <label for="password">密码</label>
+                </div>
+                <div class="center myform">
+                    <button class="btn waves-effect waves-light"
+                        onclick="APILib.doLogin('account', 'password')">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div id="loginBefore" class="loginBefore">
+            <div class="container">
+                <div class="loginBeforeBg float10">
+                    <img class="responsive-img light light1" src="images/lightOrigin.png" alt="">
+                </div>
+                <div class="loginBeforeBg float5">
+                    <img class="responsive-img light light2" src="images/lightOrigin.png" alt="">
+                </div>
+                <div class="loginBeforeBg spot1 float5"></div>
+                <div class="loginBeforeBg spot2 float10"></div>
+                <div class="loginBeforeBg spot3 float30"></div>
+                <div id="titleBlock">
+                    <img src="images/title.png" class="responsive-img" id="title" />
+                </div>
+                <div id="joinbtnBlock" class="center-align">
+                    <button class="loginBtn">
+                        <img src="images/joinBtn.png" class="responsive-img" id="loginBtn" />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="loginAfter" class="loginAfter" style="display: none;">
+            <div id="logoutBlock">
+                <div class="container row">
+                    <div class="input-field col s9 left-align">
+                        <span id="name" class="white-text"></span>
+                        <a href="#!" class="blue-text text-lighten-2" onclick="APILib.doLogout();reloadPage()">登出</a>
+                    </div>
+                    <div class="col s3 right-align">
+                        <img data-target="modal1" src="images/listBtn.png" class="modal-trigger responsive-img"
+                            id="listBtn" />
+                    </div>
+                </div>
+            </div>
+            <div class="container lotteryContainer">
+                <span class="spots topRight topRight1"></span>
+                <span class="spots topRight topRight2"></span>
+                <span class="spots bottomRight bottomRight1"></span>
+                <span class="spots bottomRight bottomRight2"></span>
+                <span class="spots bottomLeft bottomLeft1"></span>
+                <span class="spots bottomLeft bottomLeft2"></span>
+                <span class="spots topLeft topLeft1"></span>
+                <span class="spots topLeft topLeft2"></span>
+                <div id="lotteryBlock" class="lotteryBlock">
+                    <div class="lotteryLogo">
+                        <img id="lotteryLogo" class="responsive-img" src="images/lotteryLogo.png" alt="" />
+                    </div>
+                    <div class="outer KinerLottery KinerLotteryContent">
+                        <div class="innerWhite"></div>
+                        <img src="images/inside.png" class="responsive-img">
+                    </div>
+                    <div class="inner KinerLotteryBtn start"></div>
+                </div>
+                <span id="showPrize" class='yellow-text text-lighten-2'></span>
+                <div class="resultBlock">
+                    <img class="borderLight borderLightTop" src="images/borderLight.png" alt="">
+                    <img class="borderLight borderLightRight" src="images/borderLight.png" alt="">
+                    <img class="borderLight borderLightBottom" src="images/borderLight.png" alt="">
+                    <img class="borderLight borderLightLeft" src="images/borderLight.png" alt="">
+                    <p class="white-text center-align">当前流水累计：<span class="betAmount"></span>元，可抽奖<span
+                            class="playTimesLeft">0</span>次</p>
+                </div>
+            </div>
+        </div>
+        <div id="ruleBlock" class="row">
+            <div class="col s10 m7 l8 offset-s1">
+                活动规则：
+                <br> 1.投注流水满20,000元，可进行幸运转盘1次，投注后10分钟内更新，请重新整理页面
+                <br> 2.转盘使用时间为10月18日-11月3日23:59，超过时间未使用视同放弃
+                <br> 3.转盘礼金将于11月4日起1-3工作日进行派发
+                <br> 4.禁止一切作弊行为，经发现将取消参与资格，平台拥有本次活动最终解释权和裁决权
+            </div>
+            <div class="col s10 m5 l4 offset-s1">
+                <footer>
+                    <img class="responsive-img" src="images/footer.png"
+                        alt="All rights reserved.Copyright © 2019 ub8 entertainment Inc. " />
+                </footer>
+            </div>
+        </div>
+    </main>
+    <div id="modal1" class="modal">
+        <div class="scrollbar-inner">
+            <div class="modal-header">
+                <img src="images/close.png" class="modal-close right" />
+            </div>
+            <div class="modal-content" id="record_content">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/fingerprint2.min.js"></script>
+    <script type="text/javascript" src="js/api_lib.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/pace.min.js"></script>
+    <script src="js/kinerLottery.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".modal").modal({
+                opacity: 0.8
+            });
+
+            $('.scrollbar-inner').scrollbar();
+
+            $("#close").hover(
+                function () {
+                    $(this).attr("src", "images/closeHover.png");
+                },
+                function () {
+                    $(this).attr("src", "images/close.png");
+                }
+            );
+
+            $(".loginBtn").on("click", function () {
+                TweenMax.to("#loginPage", 1, { opacity: 1 });
+                $("#loginPage").css("z-index", 20);
+            });
+
+            $("#close").on("click", function () {
+                TweenMax.to("#loginPage", 1, { opacity: 0 });
+                $("#loginPage").css("z-index", 0);
+                $(".redAlert").hide();
+            });
+
+            $("body").mousemove(function (e) {
+                parallaxIt(e, ".float3", -30);
+                parallaxIt(e, ".float5", -50);
+                parallaxIt(e, ".float8", -80);
+                parallaxIt(e, ".float10", -100);
+                parallaxIt(e, ".float15", -150);
+                parallaxIt(e, ".float30", -300);
+            });
+
+            function parallaxIt(e, target, movement) {
+                var $this = $("body");
+                var relX = e.pageX - $this.offset().left;
+                var relY = e.pageY - $this.offset().top;
+
+                TweenMax.to(target, 1, {
+                    x: (relX - $this.width() / 2) / $this.width() * movement,
+                    y: (relY - $this.height() / 2) / $this.height() * movement
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

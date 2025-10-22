@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <title>作品六</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/loading.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+  <div class="page_container">
+    <div class="page page1">
+      <div id="mouse-trail"></div>
+
+      <!-- <video class="topimage-bgvideo" src="images/bg.mp4" autoplay="" loop=""></video> -->
+      <div class="bgfilter"></div>
+      <div class="rouletteBlock">
+        <img class="float120 rouletteBg" src="images/roulette_bg.png" alt="">
+        <div class="float50 roulette">
+          <img class="" src="images/roulette_board.png" alt="">
+          <img class="rotate5" src="images/roulette_numbers.png" alt="">
+          <img class="lightScreen" src="images/roulette_lightScreen.png" alt="">
+          <img class="lightDark" src="images/roulette_lightDark.png" alt="">
+          <div class="rouletteCrossShadow"><img class="rotate5 rouletteCross" src="images/roulette_cross.png" alt="">
+          </div>
+        </div>
+        <!-- <img class="float50 roulette" src="images/roulette.png" alt=""> -->
+        <img class="roulette_light float30" src="images/roulette_light.png" alt="">
+      </div>
+      <div class="textBlock">
+        <img class="float40" src="images/text.png" alt="">
+      </div>
+      <div class="cardsBlock">
+        <img class="float80" src="images/cards.png" alt="">
+      </div>
+      <div class="scrollDown">
+        <img src="images/scrollDown.png" alt="">
+      </div>
+    </div>
+    <div class="page page2">
+      <div class="p2Light"></div>
+      <img class="red float30" src="images/red.png" alt="">
+      <img class="black float50" src="images/black.png" alt="">
+      <div class="p2Text">
+        <h2>- 首个经典赌场游戏<span>【轮盘】</span>给您身历其境的赌场体验！-</h2>
+        <!-- <span class="line"></span> -->
+        <p>◆奖金翻倍：全网首创玩法-翻倍游戏，让您50%概率获得双倍奖金
+        </p>
+        <p>◆奖金更高：玩法简单容易、奖金更高</p>
+      </div>
+      <div class="QAs">
+        <img class="qaIcon" src="images/qaIcon.png" alt="">
+        <h3><img class="float10" src="images/QA.png" alt=""></h3>
+        <dl class="qa q1">
+          <dt>Q1、如何进行投注?</dt>
+          <dd>A1、在赌桌上的号码、玩法点击即可下注，100%还原赌场体验！</dd>
+        </dl>
+        <dl class="qa q2">
+          <dt>Q2、轮盘的规则及赔率在哪查看??</dt>
+          <dd>A2、进入轮盘后，点右上的"?"，或下方的"帮助"即可查看规则、赔率</dd>
+        </dl>
+        <dl class="qa q3">
+          <dt>Q3、如何参加翻倍游戏?</dt>
+          <dd>A3、中奖后，下方将出现提示，选择是否参加翻倍游戏</dd>
+        </dl>
+        <dl class="qa q4">
+          <dt>Q4、翻倍游戏奖金如何计算?</dt>
+          <dd>A4、举例来说，若当期中奖1万，参加翻倍游戏并猜中后，则获得2万元奖金；翻倍游戏若一直猜中，可以不限次数继续猜，直到点击退出、猜错或单笔达投注上限为止</dd>
+        </dl>
+        <dl class="qa q5">
+          <dt>Q5、单期投注/中奖金额上限是多少?</dt>
+          <dd>A5、单期投注上限为50万元；单期中奖金额上限为100万元</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- <script src="js/TweenMax.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/pace.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+
+      function isTouchDevice() {
+        return 'ontouchstart' in document.documentElement;
+      }
+
+      if (isTouchDevice()) {
+        $("#mouse-trail").css("visibility", "hidden");
+      } else {
+        $("#mouse-trail").css("visibility", "visible");
+      }
+
+      // move mouse-trail
+      function moveBox(e) {
+        gsap.to('#mouse-trail', {
+          duration: 0.6,
+          ease: "slow(0.1, 2, false)",
+          css: {
+            left: e.pageX,
+            top: e.pageY,
+            rotate: "+=360",
+          }
+        });
+      }
+
+      $(window).on('mousemove', moveBox);
+
+
+      Pace.on('done', function () {
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.defaults({
+          toggleActions: "play pause resume pause"
+        });
+
+        var p1tl = gsap.timeline();
+
+        p1tl
+          .to('.bgfilter', { duration: 1.2, backdropFilter: 'blur(0px) opacity(0)', ease: "slow(0.7, 0.7, false)" })
+          .to('.textBlock', { duration: 0.3, scale: 1, opacity: 1, ease: "bounce.out" }, 0.3)
+          .to('.roulette_light ', { duration: 0.3, repeat: 2, yoyo: true, opacity: 1, ease: "bounce.out" }, 0.5)
+          .to(".scrollDown", { duration: 0.5, opacity: 1, repeat: -1, yoyo: true, }, 1)
+
+        gsap.to(".p2Text", {
+          scrollTrigger: ".p2Text",
+          duration: 0.6,
+          scale: 1,
+          opacity: 1,
+          ease: "bounce.out"
+        });
+
+        gsap.to(".p2Light", {
+          scrollTrigger: ".page2",
+          duration: 1,
+          opacity: 1,
+          ease: "bounce.in",
+          repeat: -1,
+          repeatDelay: 5,
+        });
+
+        gsap.set('.qa', { opacity: 0, scale: 0.6, });
+        gsap.to(".qa", {
+          duration: 0.6,
+          scale: 1,
+          opacity: 1,
+          stagger: 0.2,
+          ease: "bounce.out",
+          scrollTrigger: {
+            trigger: ".QAs",
+            start: "+=10% center",
+            end: "bottom top"
+          }
+        });
+
+        gsap.to(".qaIcon", {
+          scrollTrigger: ".page2",
+          yPercent: 20,
+          duration: 2,
+          opacity: 1,
+          yoyo: true,
+          repeat: -1,
+        });
+
+
+      });
+
+      $(window).on('resize', function () {
+
+      });
+
+
+      $('.red')
+        .on('mouseenter', function () {
+          var $this = $(this);
+          var changeImg = "images/onRed.png";
+          $this.attr("src", changeImg);
+          gsap.to($this, { opacity: 1, duration: 0.3 })
+
+        })
+        .on('mouseleave', function () {
+          var $this = $(this);
+          var changeImg = "images/red.png";
+          $this.attr("src", changeImg);
+        });
+
+      $('.black')
+        .on('mouseenter', function () {
+          var $this = $(this);
+          var changeImg = "images/onBlack.png";
+          $this.attr("src", changeImg);
+          gsap.to($this, { opacity: 1, duration: 0.3 })
+
+        })
+        .on('mouseleave', function () {
+          var $this = $(this);
+          var changeImg = "images/black.png";
+          $this.attr("src", changeImg);
+
+        });
+
+      $(".page").mousemove(function (e) {
+        parallaxIt(e, ".float50", -50);
+        parallaxIt(e, ".float80", 80);
+        parallaxIt(e, ".float120", -120);
+        parallaxIt(e, ".float30", -30);
+        parallaxIt(e, ".float10", 10);
+        parallaxIt(e, ".float40", 40);
+        rotateIt(e, ".rotate5", 5);
+      });
+
+      function parallaxIt(e, target, movement) {
+        var $this = $(".page");
+        var relX = e.pageX - $this.offset().left;
+        var relY = e.pageY - $this.offset().top;
+
+        gsap.to(target, {
+          duration: 1,
+          x: (relX - $this.width() / 2) / $this.width() * movement,
+          y: (relY - $this.height() / 2) / $this.height() * movement
+        });
+      }
+
+      function rotateIt(e, target, movement) {
+        var $this = $(".page");
+        var relX = e.pageX - $this.offset().left;
+        var relY = e.pageY - $this.offset().top;
+
+        gsap.to(target, {
+          duration: 1,
+          rotate: (relX + relY) * movement,
+          transformOrigin: "46.4% 35.9%",
+          ease: "power4.out"
+
+          // x: (relX - $this.width() / 2) / $this.width() * movement,
+          // y: (relY - $this.height() / 2) / $this.height() * movement
+        });
+
+      }
+      // gsap.to(".rouletteCross", {
+      //         duration: 1.1,
+      //         filter: "drop-shadow(rgba(0, 0, 0, 0.3) -13px 0px 5px)",
+      //         ease:　"power4.out"
+      //     });
+
+    })
+  </script>
+</body>
+
+</html>

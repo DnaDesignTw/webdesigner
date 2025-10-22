@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+body{
+    position: relative;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#mouse-trail {
+      background: url(../images/loading_image.png);
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.9;
+      z-index: 99;
+    }
+
+.page_container {
+   overflow: hidden;
+
+}
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+   
+}
+
+.page1 {
+    background: url(../images/bg.jpg) no-repeat 85% top;
+    background-size: cover;
+}
+
+/*.bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;      
+    bottom: 0;
+    background: url(../images/bg.jpg) no-repeat 85% top;
+    background-size: cover;
+}*/
+
+/*.pace-running .bgfilter {
+    
+-webkit-backdrop-filter: sepia(40%) blur(10px) brightness(200%) saturate(99%) contrast(140%);
+    backdrop-filter: sepia(40%) blur(10px) brightness(200%) saturate(99%) contrast(140%);
+   -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+*/
+.bgfilter {
+    position: absolute; 
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(100px) opacity(1);
+    backdrop-filter: blur(100px) opacity(1);
+    /*-webkit-transition: -webkit-backdrop-filter 0.5s;
+    transition: -webkit-backdrop-filter 0.5s;
+    transition: backdrop-filter 0.5s;
+    transition: backdrop-filter 0.5s,
+    -webkit-backdrop-filter 0.5s;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;*/
+}
+
+
+.rouletteBlock, .cardsBlock {
+    position: relative;
+/*    opacity: 0;*/
+}
+
+/*.pace-done .rouletteBlock, .pace-done .cardsBlock {
+    opacity: 1;
+}*/
+
+.rouletteBlock img, .cardsBlock img {
+    position: absolute;
+}
+
+.rouletteBlock {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 120%;
+    margin-bottom: 8%;
+}
+
+.rouletteBlock .roulette_light{
+    mix-blend-mode: screen;
+    opacity: 0
+}
+
+.lightScreen {
+    mix-blend-mode: screen;
+}
+
+.rouletteCrossShadow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 12px 12px 2px);
+}
+
+.lightDark {
+    mix-blend-mode: color-burn;
+}
+
+.roulette {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.textBlock {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 95%;
+    transform: scale(0);
+    opacity: 0
+/*    max-width: 1200px;*/
+}
+
+/*.textBlock img {
+    position: relative;
+}*/
+
+.cardsBlock {
+    display: flex;
+    justify-content: center;
+    width: 66%;
+    margin-top: -10%;
+}
+
+.scrollDown {
+    position: absolute;
+    bottom: 3%;
+    width: 12%;
+    opacity: 0;
+}
+
+
+.page2 {
+    background: url(../images/p2Bg.jpg) no-repeat left top;
+    background-size: cover;
+    padding: 25% 0;
+}
+
+.page2 > img {
+    position: absolute;
+}
+
+.p2Light {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 384px;
+    background: url(../images/p2Light.png) no-repeat center top;
+    opacity: 0;
+}
+
+img.red {
+    width: 40%;
+    left: -15%;
+    top: 35%;
+    opacity: 0.5;
+}
+
+img.black {
+    width: 53%;
+    right: -21%;
+    top: 50%;
+    opacity: 0.5;
+}
+
+.p2Text {
+    width: 95%;
+    max-width: 1110px;
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.p2Text h2 {
+    position: relative;
+    font-size: 19px;
+    margin-bottom: 36px;
+    line-height: 1.6;
+}
+
+.p2Text h2 span {
+    display: inline-block;
+    transform: rotate(357deg);
+    color: #FFF474;
+    text-shadow: 1px 1px 9px black;
+}
+
+.p2Text h2:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    background: rgb(61,156,241);
+background: linear-gradient(90deg, rgba(61,156,241,0) 5%, rgba(235,235,235,1) 50%, rgba(61,156,241,0) 95%);
+}
+
+.p2Text p {
+    width: 85%;
+    margin: 0 auto 10px;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.QAs {
+    position: relative;
+    width: 95%;
+    max-width: 1110px;
+}
+
+.QAs .qaIcon {
+    position: absolute;
+    left: 0;
+    width: 18%;
+    z-index: 1;
+}
+
+.QAs h3 {
+    width: 21%;
+    margin: auto;
+}
+
+.QAs .qa {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 55px; 
+    text-align: left;
+/*    transform: scale(0);*/
+    opacity: 0;
+}
+
+.QAs .qa:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+    background: rgb(255,244,116);
+background: linear-gradient(90deg, rgba(255,244,116,0) 0%, rgba(255,244,116,1) 50%, rgba(255,244,116,0) 100%);
+}
+
+.QAs .qa.q5:after {
+    display: none;
+}
+
+.QAs .qa dt {
+    background-color: rgba(211, 36, 0, 0.5);
+    padding: 2% 5% ;
+}
+
+.QAs .qa dd {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2% 5% ;
+
+}
+
+@media only screen and (min-width: 768px) {
+    
+   .rouletteBlock {
+        width: 80%;
+        margin-bottom: 3%;
+    }
+    .cardsBlock {
+        width: 48%;
+        margin-bottom: -4%;
+    }
+    .page2 {
+        padding: 20% 0;
+    }
+    .p2Text h2 {
+        font-size: 21px;
+    }
+    .p2Text p {
+        width: 72%;
+        font-size: 17px;
+    }
+    img.red {
+        width: 20%;
+        left: -10%;
+        top: 37%;
+    }
+    img.black {
+        width: 26%;
+        right: -13%;
+        top: 54%;
+    }
+    .QAs {
+        width: 75%;
+    }
+    .QAs .qaIcon {
+        top: 18px;
+        left: -38px;
+        
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    
+    .page1 {
+        z-index: 1;
+    }
+    .page2 {
+        padding: 7% 0;
+    }
+    .rouletteBlock {
+        width: 50%;
+        margin-top: -17%;
+        margin-bottom: 3%;
+    }
+    .textBlock {
+        width: 56%;
+    }
+    .cardsBlock {
+        width: 16%;
+        margin-top: -6%;
+        margin-bottom: -11%;
+        margin-right: 50%;
+        margin-left: auto;
+    }
+    .p2Text {
+        width: 62%;
+    }
+    .p2Text h2 {
+        font-size: 25px;
+    }
+    .QAs {
+        width: 62%;
+    }
+    .QAs .qa {
+        font-size: 15px;
+        padding: 0 7%;
+    }
+    .QAs .qaIcon {
+        top: -4px;
+        left: 42px;
+        width: 13%;
+    }
+    .QAs h3 {
+        width: 11%;
+    }
+    img.red {
+        width: 16%;
+        left: -3%;
+        top: 25%;
+        opacity: 0.7;
+        max-width: 294px;
+    }
+
+
+    img.black {
+        width: 21%;
+        right: -8%;
+        top: 41%;
+        opacity: 0.7;
+        max-width: 388px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+}
+
+@media only screen and (min-width: 1366px) {
+    .p2Text p {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .p2Text h2 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+   .page2 {
+        padding: 6% 0 8%;
+    }
+    .p2Text h2 {
+        font-size: 36px;
+    }
+    .p2Text p {
+        font-size: 26px;
+    }
+    .QAs .qa {
+        font-size: 20px;
+    }
+}
