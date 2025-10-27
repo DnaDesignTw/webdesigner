@@ -40,8 +40,7 @@
                     <label for="password">密码</label>
                 </div>
                 <div class="center myform">
-                    <button class="btn waves-effect waves-light"
-                        onclick="APILib.doLogin('account', 'password')">登录</button>
+                    <button class="btn waves-effect waves-light" id="demoLogin">登录</button>
                 </div>
             </div>
         </div>
@@ -73,7 +72,7 @@
                 <div class="container row">
                     <div class="input-field col s9 left-align">
                         <span id="name" class="white-text"></span>
-                        <a href="#!" class="blue-text text-lighten-2" onclick="APILib.doLogout();reloadPage()">登出</a>
+                        <a href="#!" class="blue-text text-lighten-2" onclick="reloadPage()">登出</a>
                     </div>
                     <div class="col s3 right-align">
                         <img data-target="modal1" src="images/listBtn.png" class="modal-trigger responsive-img"
@@ -147,20 +146,90 @@
     <script type="text/javascript" src="js/jquery.scrollbar.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
+        // ---- 模擬用戶資料與前端 mock API ----
+        const demoUser = {
+            name: "Demo用户",
+            betAmount: 25000,
+            playTimesLeft: 1,
+            records: [
+                { amount: 500, recordTime: new Date().toISOString() }
+            ]
+        };
+
+        // 模擬 frequency API：更新可抽次數與按鈕狀態
+        function frequency() {
+            // update UI like the real API would
+            $('.playTimesLeft').text(demoUser.playTimesLeft);
+            if (demoUser.playTimesLeft > 0) {
+                $('.KinerLotteryBtn').removeClass('completed').addClass('start');
+            } else {
+                $('.KinerLotteryBtn').removeClass('start').addClass('completed');
+            }
+        }
+
+        // 模擬 queryLotteryInfo API：填充過去抽獎紀錄
+        function query_record() {
+            var list = demoUser.records || [];
+            var str = '';
+            if (list.length > 0) {
+                $("#listBtn").css("visibility", "visible");
+                $.each(list, function (i, item) {
+                    str += '<dl>' +
+                        '<dd>' + (i + 1) + '</dd>' +
+                        '<dd class="yellow-text text-lighten-3">￥' + item.amount + '</dd>' +
+                        '<dd>' + (new Date(item.recordTime)).toLocaleString() + '</dd>' +
+                        '</dl>';
+                });
+            } else {
+                str = '<p class="center-align">暂无记录</p>';
+            }
+            $('#record_content').html(str);
+        }
+
+
+
+        // 模擬登入處理（保留 UI 轉場）
+        function handleDemoLogin() {
+            const account = $("#account").val() || "demo";
+            if (account.trim() === "") {
+                M.toast({ html: '请输入帐号', classes: 'rounded' });
+                return;
+            }
+
+            // 隱藏登入頁面
+            TweenMax.to("#loginPage", 1, { opacity: 0 });
+            $("#loginPage").css("z-index", 0);
+
+            // 顯示登入後頁面
+            $("#loginBefore").hide();
+            $("#loginAfter").show();
+            $("#logoutBlock").show();
+            resultBlockAnimation.play();
+
+            // 更新用戶資訊
+            $("#name").text("欢迎, " + demoUser.name);
+            $(".betAmount").text(demoUser.betAmount);
+            $(".playTimesLeft").text(demoUser.playTimesLeft);
+
+            // run initial mock API updates
+            frequency();
+            query_record();
+        }
+
         $(function () {
+            // 綁定模擬登入按鈕
+            $("#demoLogin").on("click", handleDemoLogin);
+
+            // modal & scrollbar init
             $(".modal").modal({
                 opacity: 0.8
             });
-
             $('.scrollbar-inner').scrollbar();
 
+            // simple UI handlers
             $("#close").hover(
-                function () {
-                    $(this).attr("src", "images/closeHover.png");
-                },
-                function () {
-                    $(this).attr("src", "images/close.png");
-                }
+                function () { $(this).attr("src", "images/closeHover.png"); },
+                function () { $(this).attr("src", "images/close.png"); }
             );
 
             $(".loginBtn").on("click", function () {
@@ -174,6 +243,7 @@
                 $(".redAlert").hide();
             });
 
+            // parallax handler
             $("body").mousemove(function (e) {
                 parallaxIt(e, ".float3", -30);
                 parallaxIt(e, ".float5", -50);
@@ -193,6 +263,94 @@
                     y: (relY - $this.height() / 2) / $this.height() * movement
                 });
             }
+
+            // 監聽抽獎按鈕（依角度決定獎項，共 8 個扇區）
+            var whichAward = function (deg) {
+                deg = Number(deg);
+                if ((deg > 0 && deg <= 45)) {
+                    return "8元";
+                } else if ((deg > 45 && deg <= 90)) {
+                    return "18元";
+                } else if (deg > 90 && deg <= 135) {
+                    return "58元";
+                } else if (deg > 135 && deg <= 180) {
+                    return "188元";
+                } else if (deg > 180 && deg <= 225) {
+                    return "588元";
+                } else if (deg > 225 && deg <= 270) {
+                    return "1088元";
+                } else if (deg > 270 && deg <= 315) {
+                    return "18888元";
+                } else if (deg > 315 && deg <= 360) {
+                    return "再接再厉";
+                }
+                return "再接再厉";
+            };
+
+            $(document).on('click', '.KinerLotteryBtn.start', function () {
+                bgFilter.paused(true);
+                TweenMax.staggerTo(".mainBgFliter", 4, { css: { 'background-position-y': '+=10800px' }, ease: Elastic.easeInOut.config(1, 1) }, 0.2);
+                if (demoUser.playTimesLeft <= 0) {
+                    M.toast({ html: '没有抽奖次数', classes: 'rounded' });
+                    return;
+                }
+
+                // prevent double click
+                $('.KinerLotteryBtn').removeClass('start').addClass('running');
+
+                // choose a random sector 0..7 and compute target degree (middle of sector)
+                var sectorIndex = Math.floor(Math.random() * 8);
+                var sectorStart = sectorIndex * 45; // 0,45,90,...
+                var sectorEnd = sectorStart + 45;
+                var targetDeg = (sectorStart + sectorEnd) / 2; // center angle
+
+                // compute final rotation so the wheel appears to stop at targetDeg at the pointer (top)
+                var spins = 6; // full rotations
+                var finalRotation = spins * 360 + (360 - targetDeg);
+
+                // animate wheel to finalRotation
+                TweenMax.to('.outer.KinerLottery', 4, { rotation: finalRotation, transformOrigin: '50% 50%', ease: Power4.easeOut });
+                // try to play original animations (if defined)
+                try { lotteryAnimation.restart(); } catch (e) { }
+
+                // after spin completes, determine prize by the targetDeg
+                setTimeout(function () {
+                    bgFilter.play();
+                    var prizeName = whichAward(targetDeg);
+
+                    // update demo user and UI
+                    var prizeAmount = 0;
+                    if (prizeName !== '再接再厉') {
+                        // parse numeric part
+                        prizeAmount = parseInt(prizeName.replace(/[^0-9]/g, ''), 10) || 0;
+                    }
+
+                    if (prizeAmount > 0) demoUser.betAmount += prizeAmount;
+                    demoUser.records.unshift({ amount: prizeAmount, recordTime: new Date().toISOString() });
+                    if (demoUser.records.length > 20) demoUser.records.pop();
+
+                    // show result text
+                    if (prizeAmount > 0) {
+                        $('#showPrize').text('恭喜！您中了 ' + prizeName);
+                    } else {
+                        $('#showPrize').text(prizeName);
+                    }
+
+                    demoUser.playTimesLeft = Math.max(0, demoUser.playTimesLeft - 1);
+                    $('.playTimesLeft').text(demoUser.playTimesLeft);
+                    $('.betAmount').text(demoUser.betAmount);
+
+                    query_record();
+
+                    if (demoUser.playTimesLeft > 0) {
+                        $('.KinerLotteryBtn').removeClass('running').addClass('start');
+                    } else {
+                        $('.KinerLotteryBtn').removeClass('running').addClass('completed');
+                    }
+
+                    try { resultBlockAnimation.restart(); } catch (e) { }
+                }, 4300);
+            });
 
         });
     </script>
